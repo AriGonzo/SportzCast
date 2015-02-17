@@ -3,31 +3,20 @@
   <div ng-include="'components/navbar/navbar.html'"></div>
 
   <div class="jumbotron text-center">
-    <h1>'Allo, 'Allo!</h1>
-    <p class="lead">
-      <img src="assets/images/yeoman.png" alt="I'm Yeoman"><br>
-      Always a pleasure scaffolding your apps.
-    </p>
-    <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!</a></p>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-6 col-md-4" ng-repeat="awesomeThing in awesomeThings | orderBy:'rank'">
-      <div class="thumbnail">
-        <img class="pull-right" ng-src="assets/images/{{awesomeThing.logo}}" alt="{{awesomeThing.title}}">
-        <div class="caption">
-          <h3>{{awesomeThing.title}}</h3>
-          <p>{{awesomeThing.description}}</p>
-          <p><a ng-href="{{awesomeThing.url}}">{{awesomeThing.url}}</a></p>
-        </div>
-      </div>
+    <video autoplay loop id="bgvid">
+      <source src="/assets/images/forbenny.webm" type="video/webm">
+      <source src="/assets/images/forbenny.mp4" type="video/mp4">
+    </video>
+    <div class="overlay">
+      <h1>SportzCast</h1>
+      <p class="lead">
+        Casting all the Sportz in the xtreme worldz
+      </p>
+      <nav id="heroButtons">
+        <p><a class="btn btn-lg btn-success heroNav" id="nearMe" ng-href="#">Schools Near Me!</a></p>
+        <p><a class="btn btn-lg btn-success heroNav" id="browse" ng-href="#">Browse All Schools</a></p>
+        <br><p><a class="btn btn-lg btn-success heroNav" id="LiveNow" ng-href="#">Live Now</a></p>
+      </nav>
     </div>
   </div>
-
-  <hr>
-
-  <div class="footer">
-    <p>With ♥ from <a href="https://twitter.com/Swiip">@Swiip</a></p>
-  </div>
-
 </div>
