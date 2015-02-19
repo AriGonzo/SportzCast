@@ -2,13 +2,16 @@
 
   <div ng-include="'components/navbar/navbar.html'"></div>
 
-  <div class="jumbotron text-center">
-    <video autoplay loop id="bgvid">
-      <source src="/assets/images/forbenny.webm" type="video/webm">
-      <source src="/assets/images/forbenny.mp4" type="video/mp4">
+  <div id="video-wrap">  
+    <video id="my-video" preload="metadata" autoplay loop>
+      <source src="/assets/images/scoreboard.webm" type="video/webm">
+      <source src="/assets/images/scoreboard.mp4" type="video/mp4">
     </video>
+  </div>
+
+  <div class="jumbotron text-center">
     <div class="overlay">
-      <h1>SportzCast</h1>
+      <img src="/assets/images/logo.png" />
       <p class="lead">
         Casting all the Sportz in the xtreme worldz
       </p>
@@ -17,6 +20,21 @@
         <p><a class="btn btn-lg btn-success heroNav" id="browse" ng-href="#">Browse All Schools</a></p>
         <br><p><a class="btn btn-lg btn-success heroNav" id="LiveNow" ng-href="#">Live Now</a></p>
       </nav>
+    </div>
+  </div>
+  
+  <div id="otherContent">
+    <div class="jumbotron text-center">
+      <div class="overlay" id="secondOverlay">
+        <nav>
+          <ul id="panelButtons">
+            <a href="#"><li>Partners</li></a>
+            <a href="#"><li>Technology</li></a>
+            <a href="#"><li>Company</li></a>
+            <a href="#"><li>Support</li></a>
+          </ul>
+        </nav>
+      </div>
     </div>
   </div>
 </div>

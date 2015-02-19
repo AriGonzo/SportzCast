@@ -2,26 +2,44 @@
 	margin: 0;
 	padding: 0;
 }
-video#bgvid {
-	position: fixed; right: 0; bottom: 0;
-	min-width: 100%; min-height: 100%;
-	width: auto; height: auto; z-index: -100;
+body {
+	font-family: 'Oswald', sans-serif;
+	overflow-y: hidden;
+}
+video#my-video {
+	position: fixed; 
+	right: 0; 
+	bottom: 0;
+	min-width: 100%; 
+	min-height: 100%;
+	width: auto; 
+	height: auto; 
+	z-index: -100;
 	/*background: url(polina.jpg) no-repeat;*/
 	/*background-size: cover;*/
 }
 
+.container {
+	width: 100%!important;
+	padding: 0;
+}
+
+
 .jumbotron {
 	background: transparent;
-	padding: 0;
+	padding: 0!important;
 	margin: 0;
-	margin-top: 30vh;
+	margin-top: 25vh;
 }
 
 .overlay {
     z-index:1;
     color: white;
     background-color: rgba(0, 0, 0, 0.3);
-		border-radius: 5%;
+}
+
+#secondOverlay {
+	background: #222222;
 }
 
 .thumbnail {
@@ -44,10 +62,49 @@ video#bgvid {
 .heroNav {
 	padding: 20px;
 	font-size: larger;
+	background: #45B0E4;
+	border-color: #45B0E4;
 }
 
 .navbar {
 	position: fixed;
 	width: 100%;
 	left: 0;
+	background: #45B0E4;
+}
+#navLogo {
+	max-height: 150px;
+	max-width: 200px;
+	margin-top: -10px;
+}
+
+#otherContent {
+	background: #F5F5F5;
+	height: 93vh;
+}
+.nav li a{
+	color: white!important;
+}
+.nav {
+	text-align: left;
+}
+#panelButtons a{
+	text-decoration: none;
+	color: white;
+}
+#panelButtons a:hover{
+	color: #45B0E4;
+}
+
+
+#panelButtons a li {
+	display: inline;
+	font-size: 20pt;
+	padding: 0 60px;
+}
+
+@media screen and (min-height: 740px){
+	#otherContent{
+		height: 95vh;
+	}
 }
