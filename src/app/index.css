@@ -60,6 +60,11 @@ video#my-video {
 	padding: 10px;
 }
 
+#heroButtons p a:hover {
+	color: black;
+	background: #078AC9;
+}
+
 .heroNav {
 	padding: 20px;
 	font-size: larger;
@@ -89,6 +94,8 @@ video#my-video {
 }
 .nav li a:hover{
 	color: black!important;
+}
+.nav li:hover{
 	background: white;
 }
 .nav {
