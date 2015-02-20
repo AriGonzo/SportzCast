@@ -95,6 +95,10 @@ video#my-video {
 .nav li a:hover{
 	color: black!important;
 }
+.footer li a:hover{
+	height: 6.5ex;
+}
+
 .nav li:hover{
 	background: white;
 }
