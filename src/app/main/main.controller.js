@@ -2,5 +2,5 @@
 
 angular.module('sportzCast')
   .controller('MainCtrl', function ($scope) {
-   
+    
   });

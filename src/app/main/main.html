@@ -13,13 +13,16 @@
     <div class="overlay">
       <img src="/assets/images/logo.png" />
       <p class="lead">
-        Casting all the Sportz in the xtreme worldz
+        Real-Time Scores For Local Sports
       </p>
       <nav id="heroButtons">
-        <p><a class="btn btn-lg btn-success heroNav" id="nearMe" ng-href="#">Schools Near Me!</a></p>
+        <p><a smooth-scroll-jquery target="panelButtons" speed="9000" offset="30" class="btn btn-lg btn-success heroNav" id="nearMe">Schools Near Me!</a></p>
         <p><a class="btn btn-lg btn-success heroNav" id="browse" ng-href="#">Browse All Schools</a></p>
         <br><p><a class="btn btn-lg btn-success heroNav" id="LiveNow" ng-href="#">Live Now</a></p>
       </nav>
+    </div>
+    <div class="bounce">
+      <a id="faArrow" class="fa fa-arrow-circle-down" smooth-scroll-jquery target="panelButtons" speed="9000" offset="45"><span id="bgFA"></span></a>
     </div>
   </div>
   
@@ -28,7 +31,7 @@
       <div class="overlay" id="secondOverlay">
         <nav>
           <ul id="panelButtons">
-            <a href="#"><li>Partners</li></a>
+            <a href="#"><li class="active">Partners</li></a>
             <a href="#"><li>Technology</li></a>
             <a href="#"><li>Company</li></a>
             <a href="#"><li>Support</li></a>
@@ -37,4 +40,5 @@
       </div>
     </div>
   </div>
+  <div ng-include="'components/footer/footer.html'"></div>
 </div>
