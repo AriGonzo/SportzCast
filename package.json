@@ -1,7 +1,17 @@
 {
   "name": "sportzCast",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-filter": "^2.0.2",
+    "gulp-flatten": "0.0.4",
+    "gulp-imagemin": "^2.2.0",
+    "gulp-inject": "^1.2.0",
+    "gulp-minify-html": "^1.0.0",
+    "gulp-ng-html2js": "^0.1.8",
+    "gulp-rev": "^3.0.1",
+    "gulp-size": "^1.2.0",
+    "gulp-useref": "^1.1.1"
+  },
   "devDependencies": {
     "gulp": "^3.8.0",
     "gulp-autoprefixer": "^0.0.6",
