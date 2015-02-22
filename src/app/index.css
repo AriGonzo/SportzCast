@@ -3,7 +3,7 @@
 	padding: 0;
 }
 body {
-	font-family: 'Oswald', sans-serif;
+	font-family: 'Marvel', sans-serif;
 	overflow-y: hidden;
 }
 video#my-video {
@@ -108,6 +108,9 @@ video#my-video {
 #panelButtons a{
 	text-decoration: none;
 	color: white;
+	display: inline-block;
+	margin-top: 5px;
+	margin-bottom: 5px;
 }
 #panelButtons a:hover{
 	color: #45B0E4;
@@ -117,7 +120,8 @@ video#my-video {
 #panelButtons a li {
 	display: inline;
 	font-size: 19pt;
-	padding: 0 60px;
+	padding: 4px 60px;
+	padding-bottom: 8px;
 }
 
 footer {
@@ -141,6 +145,7 @@ footer {
 #panelButtons a li.active {
 	background: grey;
 	color: black;
+	font-weight: bolder;
 }
 
 #faArrow {
@@ -166,6 +171,61 @@ footer {
 	border-radius: 50%;
 	cursor: pointer;
 	text-decoration: none;
+}
+
+#big-video-vid {
+	z-index: -1;
+}
+
+#big-video-image {
+	z-index: -1;
+	position: fixed;
+	overflow-x: hidden;
+	
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+}
+
+.collapsed {
+	background-color: #333;
+}
+
+#usMap {
+	width: 1000px;
+	margin: auto;
+	overflow: visible;
+	padding-top: 10ex;
+}
+
+#mobileSlider {
+	display: none;
+}
+#mobileSearch {
+	display: none;
+}
+#alpha {
+	width: 1000px;
+	margin: auto;
+}
+#alpha h1 {
+	display: inline-block;
+	padding-right: 4em;
+	padding-top: 3ex;
+}
+#stateList {
+	height: 130px;
+	overflow: scroll;
+	margin-left: 25em;
+}
+#stateList li {
+	font-size: 15pt;
+	width: 48ex;
+	text-align: center;
+}
+#dropdownMenu1 {
+	width: 70ex;
 }
 
 .bounce {
@@ -206,7 +266,47 @@ footer {
   100% { -webkit-transform: matrix3d(2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); transform: matrix3d(2, 0, 0, 0, 0, 2, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); } 
 }
 
-@media screen and (min-height: 740px){
+@media (max-width: 900px){
+	#jumboLogo {
+		height: 100px;
+	}
+}
+@media (max-width: 750px){
+	#jumboLogo {
+		height: 75px;
+	}
+	.jumbotron {
+		margin: 20vh 0;
+	}
+	.bounce {
+		display: none;
+	}
+	#panelButtons {
+		display: none;
+	}
+	#mobileSlider {
+		display: block;
+	}
+	#mobileSearch {
+		display: block;
+		padding-top: 15px;
+	}
+	#otherContent {
+		height: 90vh!important;
+		padding-top: 20px;
+	}
+	#moreContent {
+		margin: 3vh 0;
+	}
+}
+
+@media (max-width: 550px){
+	#jumboLogo {
+		height: 50px;
+	}
+}
+
+@media (min-height: 740px){
 	#otherContent{
 		height: 95.5vh;
 	}

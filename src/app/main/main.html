@@ -1,23 +1,14 @@
 <div class="container">
 
-  <div ng-include="'components/navbar/navbar.html'"></div>
-
-  <div id="video-wrap">  
-    <video id="my-video" preload="metadata" autoplay loop>
-      <source src="assets/images/scoreboard.webm" type="video/webm">
-      <source src="assets/images/scoreboard.mp4" type="video/mp4">
-    </video>
-  </div>
-
   <div class="jumbotron text-center">
     <div class="overlay">
-      <img src="assets/images/logo.png" />
+      <img id="jumboLogo" src="assets/images/logo.png" />
       <p class="lead">
         Real-Time Scores For Local Sports
       </p>
       <nav id="heroButtons">
         <p><a smooth-scroll-jquery target="panelButtons" speed="9000" offset="30" class="btn btn-lg btn-success heroNav" id="nearMe">Schools Near Me!</a></p>
-        <p><a class="btn btn-lg btn-success heroNav" id="browse" ng-href="#">Browse All Schools</a></p>
+        <p><a class="btn btn-lg btn-success heroNav" id="browse" ng-click="main.stopVid()">Browse All Schools</a></p>
         <br><p><a class="btn btn-lg btn-success heroNav" id="LiveNow" ng-href="#">Live Now</a></p>
       </nav>
     </div>
@@ -27,18 +18,6 @@
   </div>
   
   <div id="otherContent">
-    <div class="jumbotron text-center">
-      <div class="overlay" id="secondOverlay">
-        <nav>
-          <ul id="panelButtons">
-            <a href="#"><li class="active">Partners</li></a>
-            <a href="#"><li>Technology</li></a>
-            <a href="#"><li>Company</li></a>
-            <a href="#"><li>Support</li></a>
-          </ul>
-        </nav>
-      </div>
-    </div>
+    <div ng-include="'app/views/landing.html'"></div>
   </div>
-  <div ng-include="'components/footer/footer.html'"></div>
 </div>
