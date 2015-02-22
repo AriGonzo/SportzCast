@@ -196,7 +196,7 @@ footer {
 	width: 1000px;
 	margin: auto;
 	overflow: visible;
-	padding-top: 10ex;
+	padding-top: 8ex;
 }
 
 #mobileSlider {
@@ -205,6 +205,10 @@ footer {
 #mobileSearch {
 	display: none;
 }
+#browsePage {
+	background-color: #F5F5F5;
+	height: 100vh;
+}
 #alpha {
 	width: 1000px;
 	margin: auto;
@@ -212,7 +216,10 @@ footer {
 #alpha h1 {
 	display: inline-block;
 	padding-right: 4em;
-	padding-top: 3ex;
+	padding-top: 1ex;
+}
+#vmap svg {
+	padding-left: 25ex;
 }
 #stateList {
 	height: 130px;

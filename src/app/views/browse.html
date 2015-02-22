@@ -1,16 +1,17 @@
+<div id="browsePage">
+	<div id="usMap">
+		<h1>Search by Region</h1>
+		<div id="vmap" style="width: 800px; height: 300px;"></div>
+	</div>
 
-<div id="usMap" class="browsePage">
-	<h1>Search by Region</h1>
-	<div id="vmap" style="width: 1000px; height: 550px;"></div>
-</div>
-
-<div id="alpha" class="dropdown">
-	<h1>Search by Alpha</h1>
-	<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-    Alabama
-    <span class="caret"></span>
-  </button>
-	<ul class="dropdown-menu" role="menu" id="stateList">
-		<li ng-repeat="state in browse.states" role="presentation"><a role="menuitem" tabindex="-1" href="#">{{state.name}}</a></li>
-	</ul>
+	<div id="alpha" class="dropdown">
+		<h1>Search by Alpha</h1>
+		<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+	    Alabama
+	    <span class="caret"></span>
+	  </button>
+		<ul class="dropdown-menu" ng-model="browse.selectedState" role="menu" id="stateList">
+			<li ng-repeat="state in browse.states" role="presentation"><a role="menuitem" tabindex="-1" href="#" value="{{state.abbreviation}}">{{state.name}}</a></li>
+		</ul>
+	</div>
 </div>

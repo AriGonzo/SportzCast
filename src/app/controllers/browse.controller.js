@@ -209,14 +209,14 @@ angular.module('sportzCast')
             "abbreviation": "WY"
         }
       ];
-      console.log(this.states)
   $(document).ready(function() {
         $('#vmap').vectorMap(
         	{ 
         		map: 'usa_en',
-        		backgroundColor: 'white',
+        		backgroundColor: 'transparent',
         		enableZoom: false,
         		hoverColor: '#45B0E4',
+        		color: "#808080",
         		onRegionClick: function(element, code, region){
         			console.log(region)
         		},
