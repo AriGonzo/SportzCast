@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('sportzCast')
-  .controller('NavbarCtrl', function ($scope, $state) {
+  .controller('NavbarCtrl', function ($state) {
   	$('.navbar').show()
   });

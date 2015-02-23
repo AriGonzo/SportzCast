@@ -222,4 +222,5 @@ angular.module('sportzCast')
         		},
         	});
     });
+  $('#navSep').show();
 });

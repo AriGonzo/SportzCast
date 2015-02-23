@@ -30,7 +30,7 @@ video#my-video {
 	background: transparent;
 	padding: 0!important;
 	margin: 0;
-	margin-top: 25vh;
+	margin-top: 12vh;
 }
 
 .overlay {
@@ -133,7 +133,7 @@ footer {
 	margin-bottom: 0;
 }
 
-#seperator {
+.seperator {
 	height: 30px;
 	background: black;
 }
@@ -196,7 +196,7 @@ footer {
 	width: 1000px;
 	margin: auto;
 	overflow: visible;
-	padding-top: 8ex;
+	padding-top: 10ex;
 }
 
 #mobileSlider {
@@ -234,7 +234,73 @@ footer {
 #dropdownMenu1 {
 	width: 70ex;
 }
+#navSep {
+	margin-top: 6.5ex;
+	position: absolute;
+	width: 100%;
+	display: none;
+}
 
+#bballcontain{
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	width: 500px;
+	height: 300px;
+	background: #2D2A2B;
+}
+
+.scores {
+	color: white;
+}
+#timeClock {
+	color: red;
+	text-align: center;
+	font-size: 70pt;
+}
+.scores div {
+	background: black;
+}
+#quarter {
+	font-size: 19pt;
+}
+#quarter label {
+	font-size: 21pt;
+	padding-right: 20px;
+}
+#timer {
+	color: red;
+	text-align: center;
+	font-size: 70pt;
+	background: black;
+	display: inline;
+	padding: 0 25px;
+	outline: white 2px solid;
+	padding-right: 0;
+}
+#quarter div {
+	display: inline;
+	font-size: 28pt;
+	padding: 5px 10px;
+}
+#teamScores {
+	text-align: center;
+	font-size: 33pt;
+	margin-top: -6.5ex;
+}
+#guestScore {
+	float: left;
+	margin-left: 0.5em;
+}
+#homeScore {
+	float: right;
+	margin-right: 0.7em;
+}
+.scoreEmbed {
+	position: absolute;
+	width: 600px;
+	height: 400px;
+}
 .bounce {
 	margin-top: 20px;
   -webkit-animation: animation 1750ms infinite both;

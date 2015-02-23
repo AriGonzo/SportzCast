@@ -12,6 +12,11 @@ angular.module('sportzCast', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngResource'
       	url: '/browse',
       	templateUrl: 'app/views/browse.html',
       	controller: 'BrowseCtrl as browse'
+      })
+      .state('scoreboard', {
+      	url: '/scoreboard',
+      	controller: 'MainCtrl as main',
+      	templateUrl: 'app/views/basketballScoreboard.html'
       });
 
     $urlRouterProvider.otherwise('/');
