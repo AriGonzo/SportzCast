@@ -23,8 +23,8 @@ video#my-video {
 	width: auto; 
 	height: auto; 
 	z-index: -100;
-	/*background: url(polina.jpg) no-repeat;*/
-	/*background-size: cover;*/
+	background: url(assets/images/sc.jpg) no-repeat;
+	background-size: cover;
 }
 
 .jumbotron {
@@ -429,9 +429,6 @@ footer {
 }
 
 @media (min-height: 740px){
-	#otherContent{
-		height: 94vh;
-	}
 	.container {
 		width: 101vw;
 	}
