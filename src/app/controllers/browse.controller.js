@@ -215,6 +215,7 @@ angular.module('sportzCast')
         		map: 'usa_en',
         		backgroundColor: 'transparent',
         		enableZoom: false,
+                showTooltip: true,
         		hoverColor: '#45B0E4',
         		color: "#808080",
         		onRegionClick: function(element, code, region){
