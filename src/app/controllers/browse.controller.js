@@ -209,6 +209,8 @@ angular.module('sportzCast')
             "abbreviation": "WY"
         }
       ];
+  var self = this
+  self.selectedRegion = ""
   $(document).ready(function() {
         $('#vmap').vectorMap(
         	{ 
@@ -219,9 +221,13 @@ angular.module('sportzCast')
         		hoverColor: '#45B0E4',
         		color: "#808080",
         		onRegionClick: function(element, code, region){
-        			console.log(region)
+        			$('#alpha').fadeOut(400);
+                    $('#usMap').fadeOut(400);
+                    self.selectedRegion = region
+                    alert(self.selectedRegion)
         		},
         	});
     });
+
   $('#navSep').show();
 });

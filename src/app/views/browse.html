@@ -1,4 +1,4 @@
-<div id="browsePage" class="appPage">
+<div id="browsePage" class="appPage container-fluid">
 	<div class="browseContent">
 		<div id="usMap">
 			<h1>Search by Region</h1>
@@ -14,6 +14,9 @@
 			<ul class="dropdown-menu" ng-model="browse.selectedState" role="menu" id="stateList">
 				<li ng-repeat="state in browse.states" role="presentation"><a role="menuitem" tabindex="-1" href="#" value="{{state.abbreviation}}">{{state.name}}</a></li>
 			</ul>
+		</div>
+		<div class="results">
+			{{browse.selectedRegion}} 
 		</div>
 	</div>
 </div>

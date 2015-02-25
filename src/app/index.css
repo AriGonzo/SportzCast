@@ -23,7 +23,7 @@ video#my-video {
 	width: auto; 
 	height: auto; 
 	z-index: -100;
-	background: url(assets/images/sc.jpg) no-repeat;
+	background: url(bgField.jpg) no-repeat;
 	background-size: cover;
 }
 
@@ -31,22 +31,26 @@ video#my-video {
 	background: transparent;
 	padding: 0!important;
 	margin: 0;
-	margin-top: 12vh;
+	margin-top: 7vh;
 }
 
 .overlay {
-    z-index:1;
+    z-index: 0;
     color: white;
-    background-color: rgba(0, 0, 0, 0.3);
+    float: right;
+		position: absolute;
+		right: 0;
+		padding: 5ex;
 }
 
 .landing {
-	margin-bottom: 16ex;
-	margin-top: 22ex;
+	height: 100vh;
 }
 
 #secondOverlay {
-	background: #222222;
+	background: #707070;
+	width: 100%;
+	padding: 0;
 }
 
 .thumbnail {
@@ -62,20 +66,21 @@ video#my-video {
 }
 
 #heroButtons p {
-	display: inline-block;
+	display: block;
 	padding: 10px;
 }
 
 #heroButtons p a:hover {
-	color: black;
-	background: #078AC9;
+	background: #E50312;
 }
 
 .heroNav {
 	padding: 20px;
 	font-size: larger;
-	background: #45B0E4;
-	border-color: #45B0E4;
+	background: #707070;
+	border-color: #707070;
+	width: 300px;
+
 }
 
 #otherContent {
@@ -102,9 +107,18 @@ video#my-video {
 }
 
 #panelButtons a li.active {
-	background: grey;
-	color: black;
+	color: #E50312;
 	font-weight: bolder;
+}
+
+#panelButtons a li.active::after {
+	font-family: FontAwesome;
+	content: "\f0d7";
+	color: #707070;
+	position: absolute;
+	margin-top: 1.5%;
+	margin-left: -1.75ex;
+	font-size: 36pt;
 }
 
 #faArrow {
@@ -152,6 +166,9 @@ video#my-video {
 #mobileSearch {
 	display: none;
 }
+#moreContent {
+	height: 100px;
+}
 .appPage {
 	background-color: #F5F5F5;
 	height: 100vh;
@@ -162,33 +179,53 @@ video#my-video {
   -webkit-animation: animation 1750ms infinite both;
   animation: animation 1750ms infinite both;
 }
+.contentImage {
+	height: 300px;
+	width: 450px;
+}
+#partnerImage {
+	float: right;
+}
+#technologyImage {
+	float: left;
+}
+.wallOfText {
+	padding: 0 50px;
+	font-size: 13pt;
+}
+
 /*Navbar/Footer */
 
 .navbar {
 	position: fixed;
 	width: 100%;
 	left: 0;
-	background: #45B0E4;
+	background: #E50312;
 	border: none;
 }
 #navLogo {
 	max-height: 150px;
 	max-width: 200px;
-	margin-top: -10px;
+	margin-top: -27px;
+	padding: 1.5ex;
 }
 
 .nav li a{
 	color: white!important;
 }
 .nav li a:hover{
-	color: black!important;
+	color: #E50312!important;
 }
 .footer li a:hover{
 	height: 6.5ex;
 }
+.nav li {
+	height: 50px;
+}
 
 .nav li:hover{
-	background: white;
+	background: #F5F5F5;
+	color: #E50312;
 }
 .nav {
 	text-align: left;
@@ -204,16 +241,23 @@ footer {
 }
 
 .seperator {
-	height: 30px;
-	background: black;
+	height: 5px;
+	background: #707070;
 }
 
 .fa {
 	color: black;
 }
+.fa:hover {
+	color: #E50312!important;
+}
 
 .collapsed {
 	background-color: #333;
+}
+
+#copyright {
+	font-size: 8pt;
 }
 
 /* Generated with Bounce.js. Edit at http://goo.gl/ZLxaR9 */
@@ -250,11 +294,7 @@ footer {
 
 /*Browse Page*/
 .browseContent {
-	height: 55%;
-	margin: auto;
-	display: block;
 	padding-top: 12%;
-	width: 75%;
 }
 #usMap {
 	width: 1000px;
@@ -269,7 +309,7 @@ footer {
 #alpha {
 	width: 1000px;
 	margin: auto;
-	padding-top: 8%;
+	padding-top: 5%;
 }
 #alpha h1 {
 	display: inline-block;
@@ -439,4 +479,45 @@ footer {
 	#alpha {
 		padding-top: 12%;
 	}
+	#vmap {
+		height: 700px!important;
+		width: 700px!important;
+	}
+	.browseContent {
+		margin: 0;
+		padding-top: 8%;
+	}
+	#vmap svg {
+		padding-left: 0;
+	}
+	#usMap {
+		float: left;
+		width: 44%;
+		margin: 0 0 0 5ex;
+	}
+	#usMap h1 {
+		margin: 0;
+	}
+	#alpha {
+		right: 0;
+		padding: 0;
+		position: absolute;
+		width: 50%;
+		padding-left: 5ex;
+	}
+	#alpha h1 {
+		display: block;
+	}
+	#dropdownMenu1 {
+		margin-left: 0;
+		margin-top: 5%;
+	}
+	#stateList {
+		height: 45ex;
+		margin-left: 5ex;
+	}
+}
+
+@media (min-width: 1000px){
+
 }

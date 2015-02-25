@@ -2,8 +2,8 @@
 
   <div id="video-wrap">  
     <video id="my-video" preload="metadata" autoplay loop>
-      <source src="assets/images/scoreboard.webm" type="video/webm">
-      <source src="assets/images/scoreboard.mp4" type="video/mp4">
+      <!-- <source src="assets/images/scoreboard.webm" type="video/webm">
+      <source src="assets/images/scoreboard.mp4" type="video/mp4"> -->
     </video>
   </div>
 
@@ -15,18 +15,84 @@
           Real-Time Scores For Local Sports
         </p>
         <nav id="heroButtons">
-          <p><a class="btn btn-lg btn-success heroNav" ui-sref='scoreboard' id="nearMe">Schools Near Me!</a></p>
-          <p><a class="btn btn-lg btn-success heroNav" id="browse" ng-click="main.stopVid()">Browse All Schools</a></p>
-          <br><p><a class="btn btn-lg btn-success heroNav" id="LiveNow" ng-href="#">Live Now</a></p>
+          <p><a class="btn btn-lg btn-success heroNav" id="LiveNow" ng-href="#">Live Now</a></p>
+          <p><a class="btn btn-lg btn-success heroNav" ui-sref='scoreboard' id="nearMe">Near Me</a></p>
+          <p><a class="btn btn-lg btn-success heroNav" id="browse" ng-click="main.stopVid()">Browse All</a></p>
         </nav>
-      </div>
-      <div class="bounce">
-        <a id="faArrow" class="fa fa-arrow-circle-down" smooth-scroll-jquery target="panelButtons" speed="9000" offset="45"><span id="bgFA"></span></a>
       </div>
     </div>
   </div>
   
   <div id="otherContent">
-    <div ng-include="'app/views/landing.html'"></div>
+
+    <div class="col-lg-6" id="mobileSearch">
+      <div class="input-group">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">Go!</button>
+        </span>
+        <input type="text" class="form-control" placeholder="Search for...">
+      </div><!-- /input-group -->
+    </div><!-- /.col-lg-6 -->
+
+    <div class="jumbotron text-center" id="moreContent">
+      <div class="overlay" id="secondOverlay">
+        <nav>
+          <ul id="panelButtons">
+            <a href="javascript:" ng-click="main.showTab('#Partners')"><li class="active">Partners</li></a>
+            <a href="javascript:" ng-click="main.showTab('#Technology')"><li>Technology</li></a>
+            <a href="javascript:" ng-click="main.showTab('#Company')"><li>Company</li></a>
+            <a href="javascript:" ng-click="main.showTab('#Support')"><li>Support</li></a>
+          </ul>
+          <div id="mobileSlider" ng-include="'components/slider/slider.html'"></div>
+        </nav>
+      </div>
+    </div>
+
+    <div class="panelTabs">
+      <div class="tab" id="Partners">
+        <img src="https://jeffmcclung.files.wordpress.com/2013/12/scoreboard.jpg" alt="scoreboard" id="partnerImage" class="contentImage" />
+        <div class="wallOfText">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu magna arcu. Donec interdum euismod finibus. Suspendisse pellentesque placerat metus ac dictum. Vestibulum sit amet risus tellus. Donec sapien felis, bibendum ut luctus in, eleifend a neque. Proin pharetra ultricies maximus. Donec a nisl porttitor, feugiat neque vitae, luctus sem. Donec lobortis ligula metus, et efficitur ligula fringilla vel. Aenean sed malesuada dolor. Quisque molestie blandit mi vel tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse nec ex ullamcorper, mattis risus et, aliquet orci. Cras eu urna feugiat, accumsan mauris ut, auctor enim.</p>
+          <br>
+          <p>Nulla eget tellus elementum, efficitur lectus nec, tempus lacus. Duis rhoncus, nisi volutpat egestas faucibus, massa lectus tempus velit, sit amet eleifend tortor eros et mauris. Nunc venenatis ex eget ipsum dignissim pretium. Sed dui nisl, viverra laoreet rhoncus nec, egestas a felis. Maecenas cursus finibus arcu eu molestie. Duis dictum orci ut tristique placerat. Suspendisse tristique felis non ligula venenatis, vitae tempor arcu vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam efficitur egestas commodo. Ut et est velit. Integer malesuada cursus enim. Suspendisse ante tellus, consequat nec aliquet ac, blandit at turpis. Integer auctor quam orci, at suscipit mauris faucibus eget. Vivamus auctor odio et velit fermentum gravida. Duis massa enim, auctor sed porttitor at, condimentum eu eros.</p>
+          <br>
+          <p>Suspendisse aliquet efficitur est scelerisque bibendum. Nam vitae consectetur dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo, lectus ut euismod finibus, orci elit convallis elit, quis lacinia turpis risus eget quam. Pellentesque at lacus in nulla auctor tempus ac id justo. Ut nisi velit, eleifend at libero vulputate, mollis varius nibh. Ut vel placerat enim, in bibendum ante. Aliquam auctor hendrerit posuere. Praesent gravida mattis magna, eu iaculis leo. Donec commodo, nulla in mollis convallis, lacus mauris sagittis velit, eget euismod lectus nunc ac neque. Suspendisse sodales arcu at lorem dapibus semper. Donec non velit at nisi mollis tincidunt vitae vitae arcu. Nullam in sapien nisl. Integer porta mattis leo vel mollis. Sed tempor consectetur mi quis faucibus.</p>
+        </div>
+      </div>
+
+      <div class="tab" id="Technology" hidden>
+        <img src="https://jeffmcclung.files.wordpress.com/2013/12/scoreboard.jpg" alt="scoreboard" id="technologyImage" class="contentImage" />
+        <div class="wallOfText">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu magna arcu. Donec interdum euismod finibus. Suspendisse pellentesque placerat metus ac dictum. Vestibulum sit amet risus tellus. Donec sapien felis, bibendum ut luctus in, eleifend a neque. Proin pharetra ultricies maximus. Donec a nisl porttitor, feugiat neque vitae, luctus sem. Donec lobortis ligula metus, et efficitur ligula fringilla vel. Aenean sed malesuada dolor. Quisque molestie blandit mi vel tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse nec ex ullamcorper, mattis risus et, aliquet orci. Cras eu urna feugiat, accumsan mauris ut, auctor enim.</p>
+          <br>
+          <p>Nulla eget tellus elementum, efficitur lectus nec, tempus lacus. Duis rhoncus, nisi volutpat egestas faucibus, massa lectus tempus velit, sit amet eleifend tortor eros et mauris. Nunc venenatis ex eget ipsum dignissim pretium. Sed dui nisl, viverra laoreet rhoncus nec, egestas a felis. Maecenas cursus finibus arcu eu molestie. Duis dictum orci ut tristique placerat. Suspendisse tristique felis non ligula venenatis, vitae tempor arcu vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam efficitur egestas commodo. Ut et est velit. Integer malesuada cursus enim. Suspendisse ante tellus, consequat nec aliquet ac, blandit at turpis. Integer auctor quam orci, at suscipit mauris faucibus eget. Vivamus auctor odio et velit fermentum gravida. Duis massa enim, auctor sed porttitor at, condimentum eu eros.</p>
+          <br>
+          <p>Suspendisse aliquet efficitur est scelerisque bibendum. Nam vitae consectetur dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo, lectus ut euismod finibus, orci elit convallis elit, quis lacinia turpis risus eget quam. Pellentesque at lacus in nulla auctor tempus ac id justo. Ut nisi velit, eleifend at libero vulputate, mollis varius nibh. Ut vel placerat enim, in bibendum ante. Aliquam auctor hendrerit posuere. Praesent gravida mattis magna, eu iaculis leo. Donec commodo, nulla in mollis convallis, lacus mauris sagittis velit, eget euismod lectus nunc ac neque. Suspendisse sodales arcu at lorem dapibus semper. Donec non velit at nisi mollis tincidunt vitae vitae arcu. Nullam in sapien nisl. Integer porta mattis leo vel mollis. Sed tempor consectetur mi quis faucibus.</p>
+        </div>
+      </div>
+
+      <div class="tab" id="Company" hidden>
+        <img src="https://jeffmcclung.files.wordpress.com/2013/12/scoreboard.jpg" alt="scoreboard" id="companyImage" class="contentImage" />
+        <div class="wallOfText">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu magna arcu. Donec interdum euismod finibus. Suspendisse pellentesque placerat metus ac dictum. Vestibulum sit amet risus tellus. Donec sapien felis, bibendum ut luctus in, eleifend a neque. Proin pharetra ultricies maximus. Donec a nisl porttitor, feugiat neque vitae, luctus sem. Donec lobortis ligula metus, et efficitur ligula fringilla vel. Aenean sed malesuada dolor. Quisque molestie blandit mi vel tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse nec ex ullamcorper, mattis risus et, aliquet orci. Cras eu urna feugiat, accumsan mauris ut, auctor enim.</p>
+          <br>
+          <p>Nulla eget tellus elementum, efficitur lectus nec, tempus lacus. Duis rhoncus, nisi volutpat egestas faucibus, massa lectus tempus velit, sit amet eleifend tortor eros et mauris. Nunc venenatis ex eget ipsum dignissim pretium. Sed dui nisl, viverra laoreet rhoncus nec, egestas a felis. Maecenas cursus finibus arcu eu molestie. Duis dictum orci ut tristique placerat. Suspendisse tristique felis non ligula venenatis, vitae tempor arcu vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam efficitur egestas commodo. Ut et est velit. Integer malesuada cursus enim. Suspendisse ante tellus, consequat nec aliquet ac, blandit at turpis. Integer auctor quam orci, at suscipit mauris faucibus eget. Vivamus auctor odio et velit fermentum gravida. Duis massa enim, auctor sed porttitor at, condimentum eu eros.</p>
+          <br>
+          <p>Suspendisse aliquet efficitur est scelerisque bibendum. Nam vitae consectetur dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo, lectus ut euismod finibus, orci elit convallis elit, quis lacinia turpis risus eget quam. Pellentesque at lacus in nulla auctor tempus ac id justo. Ut nisi velit, eleifend at libero vulputate, mollis varius nibh. Ut vel placerat enim, in bibendum ante. Aliquam auctor hendrerit posuere. Praesent gravida mattis magna, eu iaculis leo. Donec commodo, nulla in mollis convallis, lacus mauris sagittis velit, eget euismod lectus nunc ac neque. Suspendisse sodales arcu at lorem dapibus semper. Donec non velit at nisi mollis tincidunt vitae vitae arcu. Nullam in sapien nisl. Integer porta mattis leo vel mollis. Sed tempor consectetur mi quis faucibus.</p>
+        </div>
+      </div>
+
+      <div class="tab" id="Support" hidden>
+        <img src="https://jeffmcclung.files.wordpress.com/2013/12/scoreboard.jpg" alt="scoreboard" id="supportImage" class="contentImage" />
+        <div class="wallOfText">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eu magna arcu. Donec interdum euismod finibus. Suspendisse pellentesque placerat metus ac dictum. Vestibulum sit amet risus tellus. Donec sapien felis, bibendum ut luctus in, eleifend a neque. Proin pharetra ultricies maximus. Donec a nisl porttitor, feugiat neque vitae, luctus sem. Donec lobortis ligula metus, et efficitur ligula fringilla vel. Aenean sed malesuada dolor. Quisque molestie blandit mi vel tempor. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse nec ex ullamcorper, mattis risus et, aliquet orci. Cras eu urna feugiat, accumsan mauris ut, auctor enim.</p>
+          <br>
+          <p>Nulla eget tellus elementum, efficitur lectus nec, tempus lacus. Duis rhoncus, nisi volutpat egestas faucibus, massa lectus tempus velit, sit amet eleifend tortor eros et mauris. Nunc venenatis ex eget ipsum dignissim pretium. Sed dui nisl, viverra laoreet rhoncus nec, egestas a felis. Maecenas cursus finibus arcu eu molestie. Duis dictum orci ut tristique placerat. Suspendisse tristique felis non ligula venenatis, vitae tempor arcu vestibulum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nullam efficitur egestas commodo. Ut et est velit. Integer malesuada cursus enim. Suspendisse ante tellus, consequat nec aliquet ac, blandit at turpis. Integer auctor quam orci, at suscipit mauris faucibus eget. Vivamus auctor odio et velit fermentum gravida. Duis massa enim, auctor sed porttitor at, condimentum eu eros.</p>
+          <br>
+          <p>Suspendisse aliquet efficitur est scelerisque bibendum. Nam vitae consectetur dui. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer commodo, lectus ut euismod finibus, orci elit convallis elit, quis lacinia turpis risus eget quam. Pellentesque at lacus in nulla auctor tempus ac id justo. Ut nisi velit, eleifend at libero vulputate, mollis varius nibh. Ut vel placerat enim, in bibendum ante. Aliquam auctor hendrerit posuere. Praesent gravida mattis magna, eu iaculis leo. Donec commodo, nulla in mollis convallis, lacus mauris sagittis velit, eget euismod lectus nunc ac neque. Suspendisse sodales arcu at lorem dapibus semper. Donec non velit at nisi mollis tincidunt vitae vitae arcu. Nullam in sapien nisl. Integer porta mattis leo vel mollis. Sed tempor consectetur mi quis faucibus.</p>
+        </div>
+      </div>
+    </div>
+
   </div>
 </div>
