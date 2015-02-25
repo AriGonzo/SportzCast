@@ -88,6 +88,10 @@ video#my-video {
 	height: 93vh;
 }
 
+.tab {
+	padding: 0 100px;
+}
+
 #panelButtons a{
 	text-decoration: none;
 	color: white;
@@ -194,13 +198,15 @@ video#my-video {
 }
 #partnerImage {
 	float: right;
+	padding-left: 20px;
 }
 #technologyImage {
 	float: left;
+	padding-right: 20px;
 }
 .wallOfText {
-	padding: 0 50px;
-	font-size: 13pt;
+	font-size: 12pt;
+	text-align: justify;
 }
 
 /*Navbar/Footer */
