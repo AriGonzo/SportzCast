@@ -94,6 +94,7 @@ video#my-video {
 	display: inline-block;
 	margin-top: 5px;
 	margin-bottom: 5px;
+	width: 200px;
 }
 #panelButtons a:hover{
 	color: #45B0E4;
@@ -102,7 +103,6 @@ video#my-video {
 #panelButtons a li {
 	display: inline;
 	font-size: 19pt;
-	padding: 4px 60px;
 	padding-bottom: 8px;
 }
 
@@ -111,13 +111,22 @@ video#my-video {
 	font-weight: bolder;
 }
 
-#panelButtons a li.active::after {
+#panelButtons a li.active::before {
 	font-family: FontAwesome;
 	content: "\f0d7";
 	color: #707070;
 	position: absolute;
 	margin-top: 1.5%;
-	margin-left: -1.75ex;
+	margin-left: 2%;
+	font-size: 36pt;
+}
+#panelButtons a li.Technology.active::before {
+	font-family: FontAwesome;
+	content: "\f0d7";
+	color: #707070;
+	position: absolute;
+	margin-top: 1.5%;
+	margin-left: 3%;
 	font-size: 36pt;
 }
 

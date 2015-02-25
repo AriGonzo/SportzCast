@@ -10,8 +10,9 @@ angular.module('sportzCast')
     }
     this.showTab = function(tabName){
         $('.tab').hide();
-        $(tabName).show();
-        
+        $('#panelButtons a li').removeClass('active')
+        $(tabName).show().addClass('active');
+
     }
 
   });
