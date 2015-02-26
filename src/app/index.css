@@ -45,6 +45,11 @@ video#my-video {
 
 .landing {
 	height: 100vh;
+  background: url(/assets/images/bgfield.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 #secondOverlay {
@@ -69,7 +74,7 @@ video#my-video {
 }
 
 #heroButtons {
-	width: 90%;
+	width: 85%;
 	float: right;
 }
 
@@ -198,6 +203,7 @@ video#my-video {
 }
 #moreContent {
 	height: 100px;
+	margin-top: 0;
 }
 .appPage {
 	background-color: #F5F5F5;
@@ -570,7 +576,6 @@ footer {
 
 @media (min-width: 1290px){
 	#heroButtons {
-		width: 100%;
 		padding-top: 6ex;
 	}
 	.tab {
@@ -578,5 +583,11 @@ footer {
 	}
 	.wallOfText {
 		font-size: 15pt;
+	}
+	.jumbotron {
+		margin-top: 5vh;
+	}
+	.landing {
+		margin: 0;
 	}
 }
