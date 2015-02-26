@@ -40,7 +40,7 @@ video#my-video {
     float: right;
 		position: absolute;
 		right: 0;
-		padding: 5ex;
+		padding-top: 2ex;
 }
 
 .landing {
@@ -48,9 +48,16 @@ video#my-video {
 }
 
 #secondOverlay {
-	background: #707070;
 	width: 100%;
 	padding: 0;
+	background: #7d7e7d; /* Old browsers */
+	background: -moz-linear-gradient(top,  #7d7e7d 0%, #0e0e0e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #7d7e7d 0%,#0e0e0e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
 }
 
 .thumbnail {
@@ -62,7 +69,8 @@ video#my-video {
 }
 
 #heroButtons {
-	margin: auto;
+	width: 90%;
+	float: right;
 }
 
 #heroButtons p {
@@ -77,19 +85,28 @@ video#my-video {
 .heroNav {
 	padding: 20px;
 	font-size: larger;
-	background: #707070;
-	border-color: #707070;
+/*	background: #121010;
+	border-color: #121010;*/
 	width: 300px;
+	background: #7d7e7d; /* Old browsers */
+	background: -moz-linear-gradient(top,  #7d7e7d 0%, #0e0e0e 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #7d7e7d 0%,#0e0e0e 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+
 
 }
 
 #otherContent {
 	background: #F5F5F5;
-	height: 93vh;
 }
 
 .tab {
-	padding: 0 100px;
+	padding: 0 100px 100px 100px;
+	height: 76vh;
 }
 
 #panelButtons a{
@@ -118,7 +135,8 @@ video#my-video {
 #panelButtons a li.active::before {
 	font-family: FontAwesome;
 	content: "\f0d7";
-	color: #707070;
+	color: black;
+	z-index: -4;
 	position: absolute;
 	margin-top: 1.5%;
 	margin-left: 2%;
@@ -127,7 +145,6 @@ video#my-video {
 #panelButtons a li.Technology.active::before {
 	font-family: FontAwesome;
 	content: "\f0d7";
-	color: #707070;
 	position: absolute;
 	margin-top: 1.5%;
 	margin-left: 3%;
@@ -195,10 +212,12 @@ video#my-video {
 .contentImage {
 	height: 300px;
 	width: 450px;
+	padding-bottom: 5px;
 }
 #partnerImage {
 	float: right;
-	padding-left: 20px;
+	padding-left: 25px;
+	padding-bottom: 15px;
 }
 #technologyImage {
 	float: left;
@@ -215,21 +234,28 @@ video#my-video {
 	position: fixed;
 	width: 100%;
 	left: 0;
-	background: #E50312;
 	border: none;
+	background: #ff3019; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ff3019 0%, #cf0404 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3019), color-stop(100%,#cf0404)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ff3019 0%,#cf0404 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ff3019 0%,#cf0404 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ff3019 0%,#cf0404 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ff3019 0%,#cf0404 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', endColorstr='#cf0404',GradientType=0 ); /* IE6-9 */
+
 }
 #navLogo {
 	max-height: 150px;
 	max-width: 200px;
-	margin-top: -27px;
-	padding: 1.5ex;
+	margin-top: -1ex;
 }
 
 .nav li a{
 	color: white!important;
 }
 .nav li a:hover{
-	color: #E50312!important;
+	color: #E50312;
 }
 .footer li a:hover{
 	height: 6.5ex;
@@ -271,8 +297,12 @@ footer {
 	background-color: #333;
 }
 
-#copyright {
+.copyright {
 	font-size: 8pt;
+}
+.copyright:hover {
+	background: transparent!important;
+	color: white!important;
 }
 
 /* Generated with Bounce.js. Edit at http://goo.gl/ZLxaR9 */
@@ -443,18 +473,17 @@ footer {
 
 /*Media Queries */
 
-@media (max-width: 900px){
-	#jumboLogo {
-		height: 100px;
+@media (max-width: 845px){
+	.panelTabs {
+		display: none;
+	}
+	#secondOverlay nav {
+		display: none;
 	}
 }
+
+
 @media (max-width: 750px){
-	#jumboLogo {
-		height: 75px;
-	}
-	.jumbotron {
-		margin: 20vh 0;
-	}
 	.bounce {
 		display: none;
 	}
@@ -469,7 +498,6 @@ footer {
 		padding-top: 15px;
 	}
 	#otherContent {
-		height: 90vh!important;
 		padding-top: 20px;
 	}
 	#moreContent {
@@ -477,15 +505,22 @@ footer {
 	}
 }
 
-@media (max-width: 550px){
-	#jumboLogo {
-		height: 50px;
+@media (max-width: 630px){
+	.overlay {
+		float: none;
+		position: static;
+		right: 1;	
+		padding-right: 0;
 	}
+
 }
 
 @media (min-height: 740px){
 	.container {
 		width: 101vw;
+	}
+	.tab {
+		height: 85vh!important;
 	}
 	.landing {
 		margin-bottom: 33ex;
@@ -533,6 +568,15 @@ footer {
 	}
 }
 
-@media (min-width: 1000px){
-
+@media (min-width: 1290px){
+	#heroButtons {
+		width: 100%;
+		padding-top: 6ex;
+	}
+	.tab {
+		height: 79vh;
+	}
+	.wallOfText {
+		font-size: 15pt;
+	}
 }

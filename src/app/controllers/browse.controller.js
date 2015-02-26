@@ -2,6 +2,7 @@ angular.module('sportzCast')
   .controller('BrowseCtrl', function ($state) {
   $(document).ready(function() {	
   	$('.navbar').show();
+    $('#navLogo').fadeIn();
   });
   this.states = [
         {
@@ -229,5 +230,5 @@ angular.module('sportzCast')
         	});
     });
 
-  $('#navSep').show();
+  $('.seperator').show();
 });

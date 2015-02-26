@@ -2,6 +2,7 @@ angular.module('sportzCast')
   .controller('MainCtrl', function ($state) {
     $(document).ready(function() {
       $('.seperator').hide();
+      $('#navLogo').hide();
     });
 
     this.stopVid = function(){
