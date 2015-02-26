@@ -34,6 +34,10 @@ video#my-video {
 	margin-top: 7vh;
 }
 
+#jumboLogo {
+	width: 100%;
+}
+
 .overlay {
     z-index: 0;
     color: white;
@@ -90,9 +94,8 @@ video#my-video {
 .heroNav {
 	padding: 20px;
 	font-size: larger;
-/*	background: #121010;
-	border-color: #121010;*/
 	width: 300px;
+	border: none;
 	background: #7d7e7d; /* Old browsers */
 	background: -moz-linear-gradient(top,  #7d7e7d 0%, #0e0e0e 100%); /* FF3.6+ */
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7d7e7d), color-stop(100%,#0e0e0e)); /* Chrome,Safari4+ */
@@ -479,20 +482,16 @@ footer {
 
 /*Media Queries */
 
-@media (max-width: 845px){
-	.panelTabs {
-		display: none;
-	}
-	#secondOverlay nav {
-		display: none;
+@media (max-width: 630px){
+	.overlay {
+		float: none;
+		position: static;
+		right: 1;	
+		padding-right: 0;
 	}
 }
 
-
 @media (max-width: 750px){
-	.bounce {
-		display: none;
-	}
 	#panelButtons {
 		display: none;
 	}
@@ -505,20 +504,26 @@ footer {
 	}
 	#otherContent {
 		padding-top: 20px;
+		height: 92vh;
 	}
 	#moreContent {
 		margin: 3vh 0;
 	}
 }
 
-@media (max-width: 630px){
-	.overlay {
-		float: none;
-		position: static;
-		right: 1;	
-		padding-right: 0;
+@media (max-width: 845px){
+	.panelTabs {
+		display: none;
 	}
+	#secondOverlay nav {
+		display: none;
+	}
+}
 
+@media (max-width: 1000px){
+	#heroButtons {
+		width: 100%;
+	}
 }
 
 @media (min-height: 740px){
