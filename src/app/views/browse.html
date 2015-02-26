@@ -1,4 +1,11 @@
 <div id="browsePage" class="appPage container-fluid">
+	
+	<div class="breadcrumbs">
+		<ul class="breadcrumbList">
+			<li><a ng-click="browse.backToBrowse()">Browse</a></li>
+		</ul>
+	</div>
+
 	<div class="browseContent">
 		<div id="usMap">
 			<h1>Search by Region</h1>
@@ -12,11 +19,18 @@
 		    <span class="caret"></span>
 		  </button>
 			<ul class="dropdown-menu" ng-model="browse.selectedState" role="menu" id="stateList">
-				<li ng-repeat="state in browse.states" role="presentation"><a role="menuitem" tabindex="-1" href="#" value="{{state.abbreviation}}">{{state.name}}</a></li>
+				<li ng-repeat="state in browse.states" role="presentation"><a role="menuitem" tabindex="-1" ng-click="browse.selectState(state.name)" value="{{state.abbreviation}}">{{state.name}}</a></li>
 			</ul>
 		</div>
-		<div class="results">
-			{{browse.selectedRegion}} 
+	</div>
+	<div class="resultsContain">
+		<form id="searchBox" hidden>
+				<input type="text" id="searchFilter" class="form-control" placeholder="Search for..."></input>
+		</form>
+
+		<div class="results">  
+			<ul id="floridaResults">
+			</ul>
 		</div>
 	</div>
 </div>

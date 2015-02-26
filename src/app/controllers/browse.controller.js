@@ -1,9 +1,21 @@
 angular.module('sportzCast')
-  .controller('BrowseCtrl', function ($state) {
+  .controller('BrowseCtrl', function ($state, $http) {
   $(document).ready(function() {	
   	$('.navbar').show();
     $('#navLogo').fadeIn();
   });
+
+  this.cities = []
+
+  $http.get('../assets/data/FloridaCities.json').
+    success(function(data) {
+        angular.forEach(data, function(objects){
+            self.cities.push(objects.name)
+            self.cities.sort()
+        })
+    })
+
+
   this.states = [
         {
             "name": "Alabama",
@@ -211,7 +223,7 @@ angular.module('sportzCast')
         }
       ];
   var self = this
-  self.selectedRegion = ""
+  self.selectedRegion = 'test'
   $(document).ready(function() {
         $('#vmap').vectorMap(
         	{ 
@@ -222,13 +234,32 @@ angular.module('sportzCast')
         		hoverColor: '#45B0E4',
         		color: "#808080",
         		onRegionClick: function(element, code, region){
-        			$('#alpha').fadeOut(400);
-                    $('#usMap').fadeOut(400);
-                    self.selectedRegion = region
-                    alert(self.selectedRegion)
+                    self.selectState(region);
         		},
         	});
     });
 
+  this.selectState = function(region) {
+    $('#alpha').hide();
+    $('#usMap').hide();
+    $('.breadcrumbList').append("<li>> "+region+"</li>")  
+    angular.forEach(self.cities, function(city){
+        $('#floridaResults').append("<li><a ui-sref='resultsPage'>" + city + "</a></li>")
+    })
+    $('.results').show();
+    $('#searchBox').show();
+  }
+
   $('.seperator').show();
+
+  this.backToBrowse = function() {
+    $('.results').hide();
+    $('#alpha').fadeIn(400);
+    $('#usMap').fadeIn(400);
+    $('.breadcrumbList li:last').remove();
+    $('#floridaResults li').remove();
+    $('#searchBox').hide(); 
+    console.log(self.cities)
+  }
+
 });
