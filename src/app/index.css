@@ -509,6 +509,9 @@ footer {
 	#moreContent {
 		margin: 3vh 0;
 	}
+	#heroButtons p {
+		padding: 5px;
+	}
 }
 
 @media (max-width: 845px){
