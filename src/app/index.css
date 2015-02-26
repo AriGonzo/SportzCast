@@ -518,6 +518,10 @@ footer {
 	#secondOverlay nav {
 		display: none;
 	}
+	#footer {
+		min-height: 10px!important;
+		height: 25px!important;
+	}
 }
 
 @media (max-width: 1000px){
