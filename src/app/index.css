@@ -236,6 +236,32 @@ video#my-video {
 	font-size: 12pt;
 	text-align: justify;
 }
+.Company {
+	height: 100%;
+	width: 100%;
+}
+.Company div {
+	font-size: 12pt;
+	text-align: justify;
+	float: right;
+	width: 50%;
+}
+.Company img {
+	float: left;
+}
+.Support {
+	height: 100%;
+	width: 100%;
+}
+.Support div {
+	font-size: 12pt;
+	text-align: justify;
+	float: left;
+	width: 50%;
+}
+.Support img {
+	float: right;
+}
 
 /*Navbar/Footer */
 
@@ -384,9 +410,6 @@ footer {
 #floridaResults {
 	height: 5ex;
 	font-size: 16pt;
-}
-
-#floridaResults li {
 }
 
 div.results {
