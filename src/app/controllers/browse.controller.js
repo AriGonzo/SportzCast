@@ -217,7 +217,7 @@ angular.module('sportzCast')
     ];
   this.cities = []
 
-  $http.get('../assets/data/FloridaCities.json').
+  $http.get('./assets/data/FloridaCities.json').
     success(function(data) {
         angular.forEach(data, function(objects){
             self.cities.push(objects.name)
