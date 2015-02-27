@@ -1,20 +1,13 @@
 angular.module('sportzCast')
-  .controller('BrowseCtrl', function ($state, $http) {
+  .controller('BrowseCtrl', function ($state, $http, $filter, $rootScope) {
+  var self = this
+
   $(document).ready(function() {	
   	$('.navbar').show();
     $('#navLogo').fadeIn();
+    $('.seperator').show();
+    $('#floridaResults').hide();
   });
-
-  this.cities = []
-
-  $http.get('../assets/data/FloridaCities.json').
-    success(function(data) {
-        angular.forEach(data, function(objects){
-            self.cities.push(objects.name)
-            self.cities.sort()
-        })
-    })
-
 
   this.states = [
         {
@@ -221,9 +214,21 @@ angular.module('sportzCast')
             "name": "Wyoming",
             "abbreviation": "WY"
         }
-      ];
-  var self = this
-  self.selectedRegion = 'test'
+    ];
+  this.cities = []
+
+  $http.get('../assets/data/FloridaCities.json').
+    success(function(data) {
+        angular.forEach(data, function(objects){
+            self.cities.push(objects.name)
+            self.cities.sort()
+        })
+    })
+
+    this.selectedCity = function(city){
+        $rootScope.selectedCity = city
+    }
+
   $(document).ready(function() {
         $('#vmap').vectorMap(
         	{ 
@@ -235,6 +240,7 @@ angular.module('sportzCast')
         		color: "#808080",
         		onRegionClick: function(element, code, region){
                     self.selectState(region);
+                    console.log(self.cities)
         		},
         	});
     });
@@ -243,23 +249,19 @@ angular.module('sportzCast')
     $('#alpha').hide();
     $('#usMap').hide();
     $('.breadcrumbList').append("<li>> "+region+"</li>")  
-    angular.forEach(self.cities, function(city){
-        $('#floridaResults').append("<li><a ui-sref='resultsPage'>" + city + "</a></li>")
-    })
+    $('#floridaResults').show();
     $('.results').show();
     $('#searchBox').show();
+    $rootScope.selectedState = region;
   }
-
-  $('.seperator').show();
 
   this.backToBrowse = function() {
     $('.results').hide();
+    $('#searchBox').hide();
     $('#alpha').fadeIn(400);
     $('#usMap').fadeIn(400);
     $('.breadcrumbList li:last').remove();
     $('#floridaResults li').remove();
-    $('#searchBox').hide(); 
-    console.log(self.cities)
   }
 
 });

@@ -387,6 +387,7 @@ footer {
 
 #floridaResults li {
 	font-size: 16pt;
+	cursor: pointer;
 }
 
 div.results {

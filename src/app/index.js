@@ -13,6 +13,11 @@ angular.module('sportzCast', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngResource'
       	templateUrl: 'app/views/browse.html',
       	controller: 'BrowseCtrl as browse'
       })
+      .state('results', {
+        url: '/results',
+        controller: 'ResultsCtrl as results',
+        templateUrl: 'app/views/resultsPage.html'
+      })
       .state('schoolPage', {
       	url: '/schoolPage',
       	controller: 'SchoolCtrl as school',
