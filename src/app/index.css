@@ -427,11 +427,6 @@ div.results {
 	outline-width: 9px;
 	outline-color: black;
 }
-#schoolPageScore {
-	position: absolute;
-	margin-top: 16ex;
-	margin-left: 9ex;
-}
 .scores {
 	color: white;
 }
@@ -572,7 +567,57 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	background: -ms-linear-gradient(top,  #7d7e7d 0%,#0e0e0e 100%); /* IE10+ */
 	background: linear-gradient(to bottom,  #7d7e7d 0%,#0e0e0e 100%); /* W3C */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7d7e7d', endColorstr='#0e0e0e',GradientType=0 ); /* IE6-9 */
+}
 
+/*School Page*/
+
+.schoolScoreContain {
+	width: 50%;
+	float: left;
+}
+
+.schoolChatContain {
+		width: 50%;
+		float: right;	
+}
+
+.schoolChatContain h1 {
+	padding-top: 5ex;
+	padding-left: 2ex;
+	margin-top: 0;
+	margin-bottom: 0;
+	text-align: right;
+}
+
+.schoolScoreContain h1 {
+	padding-top: 5ex;
+	padding-left: 2ex;
+	margin-top: 0;
+	margin-bottom: 0;
+
+}
+#schoolPageScore {
+	position: absolute;
+	margin-top: 4ex;
+	margin-left: 9ex;
+}
+
+#schoolPageChat {
+	position: absolute;
+	margin-top: 22.5ex;
+	margin-left: 9ex;
+}
+
+.chatContain{
+	position: absolute;
+	top: 0; bottom: 0;
+	left: 0; right: 0;
+	width: 500px;
+	height: 300px;
+	background: #FFFEFE;
+	outline-style: double;
+	outline-width: 9px;
+	outline-color: black;
 }
 /*Media Queries */
 @media (max-width: 500px){
