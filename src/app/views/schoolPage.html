@@ -7,6 +7,23 @@
 
 	<div class="schoolChatContain">
 		
+		<div class="sportDropdown" id="schoolPageDropdown">
+				<button class="btn btn-default dropdown-toggle sportDivision" type="button" class="dropdownMenu2" data-toggle="sports" aria-expanded="true">
+					Sport
+				    <span class="caret"></span>
+				  </button>
+					<ul class="dropdown-menu" ng-model="browse.selectedState" role="menu" id="stateList">
+						<li ng-repeat="state in browse.states" role="presentation"><a role="menuitem" tabindex="-1" ng-click="browse.selectState(state.name)" value="{{state.abbreviation}}">{{state.name}}</a></li>
+					</ul>
+				<button class="btn btn-default dropdown-toggle sportDivision" type="button" class="dropdownMenu2" data-toggle="sports" aria-expanded="true">
+					Full Schedule
+				    <span class="caret"></span>
+				  </button>
+					<ul class="dropdown-menu" ng-model="browse.selectedState" role="menu" id="stateList">
+						<li ng-repeat="state in browse.states" role="presentation"><a role="menuitem" tabindex="-1" ng-click="browse.selectState(state.name)" value="{{state.abbreviation}}">{{state.name}}</a></li>
+					</ul>
+			</div>
+
 		<div id="schoolPageChat"ng-include="'app/views/chat.html'"></div>
 	</div>
 

@@ -247,6 +247,7 @@ angular.module('sportzCast')
   this.selectState = function(region) {
     $('#alpha').hide();
     $('#usMap').hide();
+    $('.stateMobile').hide();
     $('.breadcrumbList').append("<li>> "+region+"</li>")  
     $('#floridaResults').show();
     $('.results').show();

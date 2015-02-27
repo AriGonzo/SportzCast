@@ -381,11 +381,11 @@ footer {
 	display: inline;
 }
 
-#floridaResults{
+.floridaResults{
 	height: 5ex;
 }
 
-#floridaResults li {
+.floridaResults li {
 	font-size: 16pt;
 	cursor: pointer;
 }
@@ -549,6 +549,7 @@ div.results {
 .sportDropdown {
 	float: right;
 	margin-top: 10ex;
+	margin-right: 2ex;
 }
 .sportDivision {
 	width: 10em;
@@ -612,7 +613,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 }
 
 .schoolScoreContain h1 {
-	padding-top: 5ex;
+	padding-top: 7ex;
 	padding-left: 2ex;
 	margin-top: 0;
 	margin-bottom: 0;
@@ -626,8 +627,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 
 #schoolPageChat {
 	position: absolute;
-	margin-top: 22.5ex;
+	margin-top: 27.5ex;
 	margin-left: 9ex;
+}
+#schoolPageDropdown {
+	margin-top: 19ex;
+	margin-right: 4ex;
 }
 
 .chatContain{
@@ -678,6 +683,48 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	#heroButtons p {
 		padding: 5px;
 	}
+	#mobile {
+		display: block;
+		margin: auto;
+		font-size: 27pt;
+		
+	}
+	#alpha {
+		display: none;
+	}
+	.breadcrumbs {
+		margin-left: 1em;
+	}
+	div.results {
+		-moz-column-count: 1;
+		-moz-column-gap: 20px;
+		-webkit-column-count: 1;
+		-webkit-column-gap: 20px;
+		column-count: 1;
+		column-gap: 20px;
+	}
+	#floridaResults li {
+		list-style-type: none;
+		text-align: center;
+		margin: 1ex;
+	}
+	.appPage {
+		height: 100%;
+	}
+	#searchFilter {
+		width: 80%;
+		float: none;
+		margin-right: 0;
+		margin-top: 0;
+		margin-bottom: 0;
+		margin: auto;
+	}
+	.resultsContain {
+		margin-top: 12ex;
+	}
+	.sportDropdown {
+		display: none;
+	}
 }
 
 @media (max-width: 845px){
@@ -694,11 +741,44 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	#jumboLogo {
 		width: 400px;
 	}
+	#navSep {
+		margin-top: 0;
+	}
+	#usMap {
+		display: none;
+	}
+	.results {
+		display: block;
+		margin: auto;
+		font-size: 27pt;
+		margin-top: 4ex;
+	}
+}
+
+@media (max-width: 900px){
+	#vmap svg{
+		padding-left: 4ex!important;
+	}
+	#dropdownMenu1 {
+		width: 60ex;
+	}
 }
 
 @media (max-width: 1000px){
 	#heroButtons {
 		width: 100%;
+	}
+	#alpha h1 {
+		padding-right: 2em;
+	}
+}
+
+@media (max-width: 1100px){
+	#vmap svg {
+		padding-left: 20ex;
+	}
+	#dropdownMenu1 {
+		margin-left: 0;
 	}
 }
 
