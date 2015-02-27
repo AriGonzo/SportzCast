@@ -253,6 +253,7 @@ angular.module('sportzCast')
     $('.results').show();
     $('#searchBox').show();
     $rootScope.selectedState = region;
+    $('#mobile form').hide();
   }
 
   this.backToBrowse = function() {

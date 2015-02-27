@@ -725,6 +725,79 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	.sportDropdown {
 		display: none;
 	}
+	#timer {
+		font-size: 24pt;
+		padding: 10px 12px
+	}
+	.bballcontain{
+		display: none;
+	}
+	.bball button {
+		display: none;
+	}
+	.result1 {
+		float: none;
+	}
+	.result2 {
+		float: none;
+		margin-left: 3%;
+		height: 125px;
+	}
+	#result2title {
+		margin-top: -1ex;
+		text-align: left;
+	}
+	.pagination {
+		margin: 8ex 0 2ex 0
+	}
+	.bballcontainMobile {
+		display: block;
+		width: 100%;
+		height: 110px;
+		background: #2D2A2B;
+	}
+	.scoreBlock {
+		color: white;
+		width: 100px;
+		margin: auto;
+		text-align: center;
+		background: black;
+		outline: 1px white solid;
+	}
+	.awayScoreMobile div {
+		text-align: center;
+		background: black;
+	}
+	.awayScoreMobile {
+		float: left;
+		font-size: 23pt;
+		color: white;
+		margin-left: 18px;
+	}
+	.homeScoreMobile div {
+		text-align: center;
+		background: black;
+	}
+	.homeScoreMobile {
+		float: right;
+		font-size: 23pt;
+		color: white;
+		margin-right: 18px;
+	}
+	#quarterMobile {
+		text-align: center;
+		padding-top: 14px;
+		font-size: 19pt;
+	}
+	#quarterMobile label {
+		font-size: 13pt;
+		padding-right: 10px;
+	}
+	#quarterMobile div {
+		display: inline;
+		font-size: 12pt;
+		padding: 3px 6px;
+	}
 }
 
 @media (max-width: 845px){
