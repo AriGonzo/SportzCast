@@ -381,13 +381,12 @@ footer {
 	display: inline;
 }
 
-.floridaResults{
+#floridaResults {
 	height: 5ex;
+	font-size: 16pt;
 }
 
-.floridaResults li {
-	font-size: 16pt;
-	cursor: pointer;
+#floridaResults li {
 }
 
 div.results {
