@@ -4,7 +4,7 @@ angular.module('sportzCast')
 
   $(document).ready(function() {	
   	$('.navbar').show();
-    $('#navLogo').fadeIn();
+    $('#navLogo').show();
     $('.seperator').show();
     $('#floridaResults').hide();
   });
@@ -240,7 +240,6 @@ angular.module('sportzCast')
         		color: "#808080",
         		onRegionClick: function(element, code, region){
                     self.selectState(region);
-                    console.log(self.cities)
         		},
         	});
     });

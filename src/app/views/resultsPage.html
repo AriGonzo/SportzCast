@@ -7,5 +7,84 @@
 			<li>> {{results.selectedCity}}</li>
 		</ul>
 	</div>
+	
+	<div class="sportDropdown">
+		<button class="btn btn-default dropdown-toggle sportDivision" type="button" class="dropdownMenu2" data-toggle="sports" aria-expanded="true">
+			Sport
+		    <span class="caret"></span>
+		  </button>
+			<ul class="dropdown-menu" ng-model="browse.selectedState" role="menu" id="stateList">
+				<li ng-repeat="state in browse.states" role="presentation"><a role="menuitem" tabindex="-1" ng-click="browse.selectState(state.name)" value="{{state.abbreviation}}">{{state.name}}</a></li>
+			</ul>
+		<button class="btn btn-default dropdown-toggle sportDivision" type="button" class="dropdownMenu2" data-toggle="sports" aria-expanded="true">
+			Division
+		    <span class="caret"></span>
+		  </button>
+			<ul class="dropdown-menu" ng-model="browse.selectedState" role="menu" id="stateList">
+				<li ng-repeat="state in browse.states" role="presentation"><a role="menuitem" tabindex="-1" ng-click="browse.selectState(state.name)" value="{{state.abbreviation}}">{{state.name}}</a></li>
+			</ul>
+	</div>
+	
+
+	<div class="resultsContain" id="schoolResults">
+		
+		<div class="bball scoreboard result1">
+			<h3 class="gameTitle">Colonial Grenediers vs. Boone Braves</h3>
+			<div class="bballcontain result1" id="r1">
+				<div id="timeClock"><p id="timer" class="scoreFont">1:58</p>
+					<div id="quarter" class="scores">
+						<label class="scoreboardFont">QTR</label>
+						<div class="scoreFont">4</div>
+					</div>
+				</div>
+				<div id="teamScores">	
+					<div id="guestScore" class="scores">
+						<label class="scoreboardFont">GUEST</label>
+						<div class="scoreFont">116</div>
+					</div>
+					<div id="homeScore" class="scores">
+						<label class="scoreboardFont">HOME</label>
+						<div class="scoreFont">121</div>
+					</div>
+				</div>
+			</div>
+			<button class="btn btn-success selectGame">Select Game</button>
+		</div>
+
+		<div class="bball scoreboard result2">
+			
+			<h3 class="gameTitle" id="result2title">University Cougars vs. Timber Creek Wolves</h3>
+			<div class="bballcontain result2">
+				<div id="timeClock"><p id="timer" class="scoreFont">7:10</p>
+					<div id="quarter" class="scores">
+						<label class="scoreboardFont">QTR</label>
+						<div class="scoreFont">2</div>
+					</div>
+				</div>
+				<div id="teamScores">	
+					<div id="guestScore" class="scores">
+						<label class="scoreboardFont">GUEST</label>
+						<div class="scoreFont">25</div>
+					</div>
+					<div id="homeScore" class="scores">
+						<label class="scoreboardFont">HOME</label>
+						<div class="scoreFont">35</div>
+					</div>
+				</div>
+			</div>
+			<button class="btn btn-success selectGame">Select Game</button>
+		</div>
+
+		<div class="paginationContain">
+			<div class="pagination">
+			    <a href="#" class="first" data-action="first">&laquo;</a>
+			    <a href="#" class="previous" data-action="previous">&lsaquo;</a>
+			    <input class="pageNum"type="text" readonly="readonly" data-max-page="40" />
+			    <a href="#" class="next" data-action="next">&rsaquo;</a>
+			    <a href="#" class="last" data-action="last">&raquo;</a>
+			</div>
+		</div>
+
+	</div>
 
 </div>

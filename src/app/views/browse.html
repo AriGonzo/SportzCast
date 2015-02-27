@@ -28,7 +28,8 @@
 		<form id="searchBox" hidden>
 				<input type="text" id="searchFilter" ng-model="citySearch" class="form-control" placeholder="Search for..." ng-keyup="browse.keyAlert()"></input>
 		</form>
-
+		<br>
+		<hr>
 		<div class="results">  
 			<ul id="floridaResults">
 				<li ng-click="browse.selectedCity(this.city)" ng-repeat="city in browse.cities | filter:citySearch"><a ui-sref="results">{{city}}</a></li>
