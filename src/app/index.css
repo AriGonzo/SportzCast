@@ -489,6 +489,28 @@ div.results {
 	height: 400px;
 }
 
+.foulCount {
+	margin-top: 24ex;
+	display: block;
+}
+#foulLabel {
+	color: white;
+	margin-left: 15px;
+}
+#foulCountNum {
+	display: inline-block;
+	font-size: 24pt;
+	background: black;
+	padding: 7px 14px;
+	margin-left: 15px;
+}
+.guest {
+	float: left;
+}
+.home {
+	float: right;
+	margin-right: 4ex;
+}
 /*Results Page*/
 
 #resultsPageScore {
