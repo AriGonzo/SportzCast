@@ -370,9 +370,12 @@ footer {
 	padding-left: 25ex;
 }
 #stateList {
-	height: 130px;
+	height: 330px;
 	overflow: scroll;
 	margin-left: 28em;
+	width: 50%;
+	margin-top: -51ex;
+
 }
 #stateList li {
 	font-size: 15pt;
@@ -414,17 +417,17 @@ div.results {
 	width: 85%;
 	margin: auto;
 	background: #F5F5F5;
-	-moz-column-count: 4;
-  -moz-column-gap: 20px;
-  -webkit-column-count: 4;
-  -webkit-column-gap: 20px;
-  column-count: 4;
-  column-gap: 20px;
+	-moz-column-count: 5;
+  -moz-column-gap: 10px;
+  -webkit-column-count: 5;
+  -webkit-column-gap: 10px;
+  column-count: 5;
+  column-gap: 10px;
 }
 
 .resultsContain {
 	background-color: #F5F5F5;
-	margin: 0 -2ex;
+	margin: 15ex -2ex 0;
 }
 #searchFilter {
 	width: 25%;

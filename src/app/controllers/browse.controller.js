@@ -1,5 +1,5 @@
 angular.module('sportzCast')
-  .controller('BrowseCtrl', function ($state, $http, $filter, $rootScope) {
+  .controller('BrowseCtrl', function ($state, $rootScope, $resource, SportzCastApi) {
   var self = this
 
   $(document).ready(function() {	
@@ -215,19 +215,14 @@ angular.module('sportzCast')
             "abbreviation": "WY"
         }
     ];
-  this.cities = []
 
-  $http.get('./assets/data/FloridaCities.json').
-    success(function(data) {
-        angular.forEach(data, function(objects){
-            self.cities.push(objects.name)
-            self.cities.sort()
-        })
-    })
+  //BROWSE//
+  
+  var baseUrl =  SportzCastApi.url("geo")
 
-    this.selectedCity = function(city){
-        $rootScope.selectedCity = city
-    }
+  this.search = function(region){
+    return SportzCastApi.get(baseUrl, region)
+  }
 
   $(document).ready(function() {
         $('#vmap').vectorMap(
@@ -240,29 +235,31 @@ angular.module('sportzCast')
         		color: "#808080",
         		onRegionClick: function(element, code, region){
                     self.selectState(region);
+                    console.log(region)
         		},
         	});
     });
 
+  this.cities = []
+
   this.selectState = function(region) {
+    //avoid bug with jquery map tooltip 
     $('#alpha').hide();
     $('#usMap').hide();
-    $('.stateMobile').hide();
-    $('.breadcrumbList').append("<li>> "+region+"</li>")  
-    $('#floridaResults').show();
-    $('.results').show();
-    $('#searchBox').show();
-    $rootScope.selectedState = region;
-    $('#mobile form').hide();
-  }
+    
+    this.search(region).then(function(data){
+        angular.forEach(data.Results, function(city){
+          self.cities.push(city.Name)
+        })
+        $rootScope.cities = self.cities
+        $rootScope.selectedState = region;
+        $state.go('cities', {region:region})
+    })
 
-  this.backToBrowse = function() {
-    $('.results').hide();
-    $('#searchBox').hide();
-    $('#alpha').fadeIn(400);
-    $('#usMap').fadeIn(400);
-    $('.breadcrumbList li:last').remove();
-    $('#floridaResults li').remove();
+    //mobile
+    $('.stateMobile').hide();
+    $('#mobile form').hide();
+
   }
 
 });

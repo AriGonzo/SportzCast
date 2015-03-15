@@ -1,0 +1,19 @@
+<div class="appPage container-fluid">
+	
+	<div class="breadcrumbs">
+		<ul class="breadcrumbList">
+			<li><a ui-sref="browse.states">Browse</a></li>
+		</ul>
+	</div>
+
+	<div class="resultsContain">
+			<form id="searchBox">
+					<input type="text" id="searchFilter" ng-model="citySearch" class="form-control" placeholder="Search for..."></input>
+			</form>
+			<div class="results">  
+				<ul id="floridaResults">
+					<li ng-repeat="cityName in city.cities | filter:citySearch"><a ng-click="city.citySelect(cityName)">{{cityName}}</a></li>
+				</ul>
+			</div>
+		</div>
+</div>

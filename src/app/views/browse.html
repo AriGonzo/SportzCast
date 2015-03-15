@@ -24,20 +24,9 @@
 		</div>
 	</div>
 
-	<div class="resultsContain">
-		<form id="searchBox" hidden>
-				<input type="text" id="searchFilter" ng-model="citySearch" class="form-control" placeholder="Search for..." ng-keyup="browse.keyAlert()"></input>
-		</form>
-		<div class="results">  
-			<ul id="floridaResults">
-				<li ng-click="browse.selectedCity(this.city)" ng-repeat="city in browse.cities | filter:citySearch"><a ui-sref="results">{{city}}</a></li>
-			</ul>
-		</div>
-	</div>
-
 	<div class="results" id="mobile" hidden>
 		<form id="searchBox">
-				<input type="text" ng-model="stateSearch" class="form-control" placeholder="Search for..." ng-keyup="browse.keyAlert()"></input>
+				<input type="text" ng-model="stateSearch" class="form-control" placeholder="Search for..."></input>
 		</form>  
 		<ul id="floridaResults" class="stateMobile">
 			<li ng-repeat="state in browse.states | filter:stateSearch"><a ng-click="browse.selectState(state.name)">{{state.name}}</a></li>

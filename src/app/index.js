@@ -9,9 +9,18 @@ angular.module('sportzCast', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngResource'
         controller: 'MainCtrl as main'
       })
       .state('browse', {
-      	url: '/browse',
-      	templateUrl: 'app/views/browse.html',
-      	controller: 'BrowseCtrl as browse'
+        abstract: true,
+        templateUrl: 'app/views/browse.html',
+        controller: 'BrowseCtrl as browse'
+      })
+      .state('browse.states', {
+        url: '/browse',
+        template: '<ui-view/>' 
+      })  
+      .state('cities', {
+        url: '/browse/:region',
+        templateUrl: 'app/views/cities.html',
+        controller: 'CityCtrl as city'
       })
       .state('results', {
         url: '/results',
@@ -22,8 +31,12 @@ angular.module('sportzCast', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngResource'
       	url: '/schoolPage',
       	controller: 'SchoolCtrl as school',
       	templateUrl: 'app/views/schoolPage.html'
+      })
+      .state('nearMe', {
+        url: '/nearMe',
+        controller: 'GeoLocateCtrl as geo',
+        templateUrl: 'app/views/geoResults.html'
       });
-
     $urlRouterProvider.otherwise('/');
   })
 ;
