@@ -20,7 +20,7 @@ angular.module('sportzCast', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngResource'
       .state('cities', {
         url: '/browse/:region',
         templateUrl: 'app/views/cities.html',
-        controller: 'CityCtrl as city'
+        controller: 'CityCtrl as cty'
       })
       .state('results', {
         url: '/results',

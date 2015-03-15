@@ -7,10 +7,10 @@ angular.module('sportzCast')
   		},
 
   		get: function(baseUrl, region){
-  			var result = $resource(baseUrl + region,
+  			var result = $resource(baseUrl + region+"?index=350",
       		{ callback: "JSON_CALLBACK"},
       		{ get: { method: 'JSONP'}});
   			return result.get().$promise;
   		}
   	}
-  })
+  });

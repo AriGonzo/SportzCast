@@ -11,12 +11,11 @@ angular.module('sportzCast')
 	  navigator.geolocation.getCurrentPosition(function(position) {
     	self.lat = position.coords.latitude
     	self.long = position.coords.longitude
-    	console.log(position.coords)
     	console.log(self.lat)
-			console.log(self.long)
+    	console.log(self.long)
 		})
 
 
 
 
-  })
+  });

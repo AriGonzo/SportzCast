@@ -244,16 +244,16 @@ angular.module('sportzCast')
 
   this.selectState = function(region) {
     //avoid bug with jquery map tooltip 
+    
     $('#alpha').hide();
     $('#usMap').hide();
     
     this.search(region).then(function(data){
-        angular.forEach(data.Results, function(city){
-          self.cities.push(city.Name)
-        })
+        self.cities = data.Results
         $rootScope.cities = self.cities
         $rootScope.selectedState = region;
         $state.go('cities', {region:region})
+        console.log(self.cities)
     })
 
     //mobile
