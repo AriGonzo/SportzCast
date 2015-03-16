@@ -74,7 +74,7 @@
 			    <button class="previous" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">&lsaquo;</button>
 			    <div class="pageNum"type="text">{{currentPage + 1}} / {{results.numberOfPages()}}</div>
 			    <button class="next" ng-disabled="currentPage >= results.resultList.length/2 -1" ng-click="currentPage=currentPage+1">&rsaquo;</button>
-			    <button class="last" ng-click="currentPage = results.resultList.length/2 -1">&raquo;</button>
+			    <button class="last" ng-click="currentPage = results.numberOfPages()-1">&raquo;</button>
 			</div>
 		</div>
 
