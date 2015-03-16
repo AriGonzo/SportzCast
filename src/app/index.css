@@ -403,17 +403,17 @@ div.results {
 	width: 85%;
 	margin: auto;
 	background: #F5F5F5;
-	-moz-column-count: 5;
+	-moz-column-count: 6;
   -moz-column-gap: 10px;
-  -webkit-column-count: 5;
+  -webkit-column-count: 6;
   -webkit-column-gap: 10px;
-  column-count: 5;
+  column-count: 6;
   column-gap: 10px;
 }
 
 .resultsContain {
 	background-color: #F5F5F5;
-	margin: 15ex -2ex 0;
+	margin: 15ex 0 10ex;
 }
 #searchFilter {
 	width: 25%;
@@ -549,6 +549,10 @@ div.results {
 	width: 100%;
 	margin-top: 25ex;
 }
+#schoolResults li {
+	list-style-type: none;
+}
+
 #result2title {
 	text-align: right;
 }
@@ -567,15 +571,24 @@ div.results {
 .paginationContain {
 	width: 40ex;
 	margin: auto;
-	padding-left: 40px;
 }
 .pagination {
 	font-size: 16pt;
 	margin: 12ex 0;
-}
-.pageNum {
+	width: 100%;
 	text-align: center;
 }
+.pagination a, .pageNum{
+	display: inline-block;
+	padding: 8px;
+}
+.gameSubTitle:nth-child(3){
+	text-align: right;
+}
+#sportName {
+	float: right;
+}
+
 .selectGame {
 	margin-top: 3ex;
 	padding: 4px 70px;

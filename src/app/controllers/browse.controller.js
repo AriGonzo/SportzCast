@@ -1,5 +1,6 @@
 angular.module('sportzCast')
   .controller('BrowseCtrl', function ($state, $rootScope, $resource, SportzCastApi) {
+  $rootScope.selectedState = ""
   var self = this
 
   $(document).ready(function() {	
@@ -240,22 +241,15 @@ angular.module('sportzCast')
         	});
     });
 
-  this.cities = []
-
   this.selectState = function(region) {
     //avoid bug with jquery map tooltip 
-    
     $('#alpha').hide();
     $('#usMap').hide();
-    
-    this.search(region).then(function(data){
-        self.cities = data.Results
-        $rootScope.cities = self.cities
-        $rootScope.selectedState = region;
-        $state.go('cities', {region:region})
-        console.log(self.cities)
-    })
 
+    setTimeout(function(){
+      $state.go('cities', {region:region})
+    }, 250)
+  
     //mobile
     $('.stateMobile').hide();
     $('#mobile form').hide();

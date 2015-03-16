@@ -5,21 +5,24 @@ angular.module('sportzCast')
   	var self = this;
   	this.cities = $rootScope.cities
 
-  	if(region == undefined) {
+  	if(!region) {
   		region = $stateParams.region
   	}
 
-  	if (this.cities == undefined){
+  	if(!this.cities) {
   		self.cities = [];
-  		SportzCastApi.get(baseUrl, region).then(function(data){
+  		SportzCastApi.get(baseUrl, region, '?limit=100000').then(function(data){
   			self.cities = data.Results
+  			console.log(self.cities)
   		})
+  		console.log(self.cities)
   	}
 
   	$('.breadcrumbList').append("<li>> "+region+"</li>")
   	
   	this.citySelect = function(cityId, cityName){
-    		$rootScope.selectedCity = cityName
+    		$rootScope.selectedCity = {id: cityId, name:cityName}
+    		$rootScope.selectedState = region
     		$state.go('results')
     		console.log(cityName)
     		console.log(cityId)

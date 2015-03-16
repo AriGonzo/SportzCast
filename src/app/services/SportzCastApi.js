@@ -6,11 +6,16 @@ angular.module('sportzCast')
   			return "http://sportzcast-api.azurewebsites.net/"+ param +"/"
   		},
 
-  		get: function(baseUrl, region){
-  			var result = $resource(baseUrl + region+"?index=350",
+  		get: function(baseUrl, method, parameter, limit){
+  			parameter = parameter || '';
+  			limit = limit || '';
+  			
+  			var result = $resource(baseUrl + method + parameter + limit,
       		{ callback: "JSON_CALLBACK"},
       		{ get: { method: 'JSONP'}});
   			return result.get().$promise;
   		}
   	}
   });
+
+  // http://sportzcast-api.azurewebsites.net/games/search?CityId=19283

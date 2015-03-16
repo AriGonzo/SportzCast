@@ -4,7 +4,7 @@
 		<ul class="breadcrumbList">
 			<li><a ui-sref="browse.states">Browse</a></li>
 			<li><a ui-sref="browse">> {{results.selectedState}}</a></li>
-			<li>> {{results.selectedCity}}</li>
+			<li>> {{results.selectedCity.name}}</li>
 		</ul>
 	</div>
 	
@@ -26,10 +26,11 @@
 	</div>
 	
 
-	<div class="resultsContain" id="schoolResults">
+	<ul class="resultsContain" id="schoolResults">
 		
-		<div class="bball scoreboard result1">
-			<h3 class="gameTitle">Colonial Grenediers vs. Boone Braves</h3>
+		<li class="bball scoreboard result1" ng-repeat="game in results.resultList | startFrom:currentPage*2 | limitTo: results.pageSize">
+			<h3 class="gameTitle">{{game.AwayName}} @ {{game.SchoolName}}</h3>
+			<p class="gameSubTitle">date:{{game.stringDate}}<span id="sportName">sport: {{game.SportName}}</span></p>
 			<div class="bballcontain result1" id="r1">
 				<div id="timeClock"><p id="timer" class="scoreFont">1:58</p>
 					<div id="quarter" class="scores">
@@ -64,58 +65,19 @@
 				</div>
 			</div>
 
-			<button ui-sref="schoolPage" class="btn btn-success selectGame">Select Game</button>
-		</div>
-
-		<div class="bball scoreboard result2">
-			
-			<h3 class="gameTitle" id="result2title">University Cougars vs. Timber Creek Wolves</h3>
-			<div class="bballcontain result2">
-				<div id="timeClock"><p id="timer" class="scoreFont">7:10</p>
-					<div id="quarter" class="scores">
-						<label class="scoreboardFont">QTR</label>
-						<div class="scoreFont">2</div>
-					</div>
-				</div>
-				<div id="teamScores">	
-					<div id="guestScore" class="scores">
-						<label class="scoreboardFont">GUEST</label>
-						<div class="scoreFont">25</div>
-					</div>
-					<div id="homeScore" class="scores">
-						<label class="scoreboardFont">HOME</label>
-						<div class="scoreFont">35</div>
-					</div>
-				</div>
-			</div>
-			<div class="bballcontainMobile" hidden>
-				<div class="awayScoreMobile">
-					<label>GUEST</label>
-					<div class="scoreFont">116</div>
-				</div>
-				<div class="homeScoreMobile">
-					<label>HOME</label>
-					<div class="scoreFont">121</div>
-				</div>
-				<div class="scoreBlock scoreboardFont">1:10</div>
-				<div id="quarterMobile" class="scores">
-					<label class="scoreboardFont">QTR</label>
-					<div class="scoreFont">4</div>
-				</div>
-			</div>
-			<button ui-sref="schoolPage"class="btn btn-success selectGame">Select Game</button>
-		</div>
+			<button ng-click="results.selectGame(game)" class="btn btn-success selectGame">Select Game</button>
+		</li>
 
 		<div class="paginationContain">
 			<div class="pagination">
-			    <a href="#" class="first" data-action="first">&laquo;</a>
-			    <a href="#" class="previous" data-action="previous">&lsaquo;</a>
-			    <input class="pageNum"type="text" readonly="readonly" data-max-page="40" />
-			    <a href="#" class="next" data-action="next">&rsaquo;</a>
-			    <a href="#" class="last" data-action="last">&raquo;</a>
+			    <button class="first" ng-click="currentPage = 0">&laquo;</button>
+			    <button class="previous" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">&lsaquo;</button>
+			    <div class="pageNum"type="text">{{currentPage + 1}} / {{results.numberOfPages()}}</div>
+			    <button class="next" ng-disabled="currentPage >= results.resultList.length/2 -1" ng-click="currentPage=currentPage+1">&rsaquo;</button>
+			    <button class="last" ng-click="currentPage = results.resultList.length/2 -1">&raquo;</button>
 			</div>
 		</div>
 
-	</div>
+	</ul>
 
 </div>
