@@ -14,6 +14,7 @@ angular.module('sportzCast')
 		this.currentPage = 0
 		this.pageSize = 2
 		this.pageCount = 0
+    var indexCount = 0
 
   	var baseUrl = SportzCastApi.url('games')
   	SportzCastApi.get(baseUrl, 'search', "?CityId="+this.selectedCity.id).
@@ -30,8 +31,17 @@ angular.module('sportzCast')
   			console.log(self.resultList)
   		})
 
+    // this.myPagingFunction = function(){
+    //   SportzCastApi.get(baseUrl, 'search', "?CityId="+this.selectedCity.id, "&index="+indexCount, "&limit=2").
+    //     then(function(data){
+    //       console.log(data.Results)
+    //       self.resultList.push(data.Results)
+    //     })
+    // }
+
   	this.selectGame = function(game){
-  		console.log(game)
+      $rootScope.selectedGame = game
+      $state.go('schoolPage',{school: game.SchoolSlug})
   	}
 
 

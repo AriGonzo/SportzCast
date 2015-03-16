@@ -28,7 +28,7 @@
 
 	<ul class="resultsContain" id="schoolResults">
 		
-		<li class="bball scoreboard result1" ng-repeat="game in results.resultList | startFrom:currentPage*2 | limitTo: results.pageSize">
+		<li class="bball scoreboard result1" ng-repeat="game in results.resultList">
 			<h3 class="gameTitle">{{game.AwayName}} @ {{game.SchoolName}}</h3>
 			<p class="gameSubTitle">date:{{game.stringDate}}<span id="sportName">sport: {{game.SportName}}</span></p>
 			<div class="bballcontain result1" id="r1">
@@ -68,7 +68,7 @@
 			<button ng-click="results.selectGame(game)" class="btn btn-success selectGame">Select Game</button>
 		</li>
 
-		<div class="paginationContain">
+<!-- 		<div class="paginationContain">
 			<div class="pagination">
 			    <button class="first" ng-click="currentPage = 0">&laquo;</button>
 			    <button class="previous" ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">&lsaquo;</button>
@@ -76,7 +76,7 @@
 			    <button class="next" ng-disabled="currentPage >= results.resultList.length/2 -1" ng-click="currentPage=currentPage+1">&rsaquo;</button>
 			    <button class="last" ng-click="currentPage = results.numberOfPages()-1">&raquo;</button>
 			</div>
-		</div>
+		</div> -->
 
 	</ul>
 

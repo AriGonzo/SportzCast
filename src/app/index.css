@@ -4,6 +4,7 @@
 }
 body {
 	font-family: 'Marvel', sans-serif;
+	background-color: #F5F5F5;
 }
 .container {
 	width: 100%;
@@ -194,10 +195,6 @@ body {
 	height: 100px;
 	margin-top: 0;
 }
-.appPage {
-	background-color: #F5F5F5;
-	height: 100vh;
-}
 
 .bounce {
 	margin-top: 20px;
@@ -325,6 +322,9 @@ footer {
 }
 
 /*Browse Page*/
+#browsePage {
+	height: 100vh;
+}
 .browseContent {
 	padding-top: 12%;
 }
@@ -429,8 +429,8 @@ div.results {
 	position: absolute;
 	top: 0; bottom: 0;
 	left: 0; right: 0;
-	width: 500px;
-	height: 300px;
+	width: 486px;
+  height: 270px;
 	background: #2D2A2B;
 	outline-style: double;
 	outline-width: 9px;
@@ -536,11 +536,21 @@ div.results {
 	position: static;
 }
 
-.result2 {
+.result1:nth-child(n+1):nth-child(even) {
 	float: right;
-	position: static;
-	height: 200px;
+	margin-right: 5ex;
 }
+.result1:nth-child(n+1):nth-child(even) h3 {
+	float: right;
+}
+.bball:nth-child(n+3) {
+	margin-top: 25ex;
+}
+.bball:last-child {
+	margin-bottom: 27ex;
+}
+
+
 
 .gameTitle {
 	margin-top: -3ex;
@@ -551,7 +561,7 @@ div.results {
 }
 #schoolResults li {
 	list-style-type: none;
-	margin-left: 10ex;
+	margin-left: 5ex;
 }
 
 #result2title {
@@ -623,11 +633,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 .schoolScoreContain {
 	width: 50%;
 	float: left;
+	margin-top: 5ex;
 }
 
 .schoolChatContain {
 		width: 50%;
 		float: right;	
+		margin-top: 5ex;
 }
 
 .schoolChatContain h1 {
@@ -639,10 +651,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 }
 
 .schoolScoreContain h1 {
-	padding-top: 7ex;
+	padding-top: 8ex;
 	padding-left: 2ex;
 	margin-top: 0;
 	margin-bottom: 0;
+	font-size: 25pt
 
 }
 #schoolPageScore {
@@ -660,13 +673,47 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	margin-top: 19ex;
 	margin-right: 4ex;
 }
+.schoolBanner {
+	width: 100%;
+  height: 100px;
+  background: #B2090D;
+  position: absolute;
+  margin-top: 7ex;
+}
+
+.schoolBanner div {
+	display: inline-block;
+	width: 33%;
+	height: 100%;
+}
+.schoolAd img {
+	height: 75%;
+	margin: 15px;
+  float: left;
+}
+div.brandSchoolBanner {
+	text-align: center;
+	font-size: 35pt;
+	font-weight: bold;
+	position: absolute;
+	margin-top: 15px;
+}
+.schoolLogo {
+	position: absolute;
+	right: 0;
+}
+.schoolLogo img {
+	height: 100%;
+	width: 60%;
+  float: right;
+}
 
 .chatContain{
 	position: absolute;
 	top: 0; bottom: 0;
 	left: 0; right: 0;
-	width: 500px;
-	height: 300px;
+	width: 486px;
+  height: 270px;
 	background: #FFFEFE;
 	outline-style: double;
 	outline-width: 9px;

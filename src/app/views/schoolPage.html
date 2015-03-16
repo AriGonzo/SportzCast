@@ -1,7 +1,12 @@
 <div id="schoolPage" class="appPage">
+	<div class="schoolBanner">
+		<div class="schoolAd"><img src="{{school.schoolInfo.Sponsor.Url}}"/></div>
+		<div class="brandSchoolBanner">{{school.schoolInfo.Name}}</div>
+		<div class="schoolLogo"><img src="{{school.schoolInfo.Logo}}"/></div>
+	</div>
 
 	<div class="schoolScoreContain">
-		<h1>Colonial Grenediers @ Boone Braves</h1>
+		<h1>{{school.game.AwayName}} @ {{school.game.SchoolName}}</h1>
 		<div id="schoolPageScore"ng-include="'app/views/basketballScoreboard.html'"></div>
 	</div>
 

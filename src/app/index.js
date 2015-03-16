@@ -28,7 +28,7 @@ angular.module('sportzCast', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngResource'
         templateUrl: 'app/views/resultsPage.html'
       })
       .state('schoolPage', {
-      	url: '/schoolPage',
+      	url: '/:school',
       	controller: 'SchoolCtrl as school',
       	templateUrl: 'app/views/schoolPage.html'
       })
