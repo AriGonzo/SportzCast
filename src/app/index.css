@@ -551,6 +551,7 @@ div.results {
 }
 #schoolResults li {
 	list-style-type: none;
+	margin-left: 10ex;
 }
 
 #result2title {
@@ -578,9 +579,12 @@ div.results {
 	width: 100%;
 	text-align: center;
 }
-.pagination a, .pageNum{
+.pagination button, .pageNum{
 	display: inline-block;
-	padding: 8px;
+	padding: 5px 8px
+}
+.pagination button {
+	font-size: 17pt;
 }
 .gameSubTitle:nth-child(3){
 	text-align: right;
