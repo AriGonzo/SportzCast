@@ -2,6 +2,7 @@ angular.module('sportzCast')
   .controller('ResultsCtrl', function ($state, $rootScope, SportzCastApi) {
   	window.scrollTo(0,0)
   	var self = this
+
   	this.resultList = []
   	this.selectedState = $rootScope.selectedState
   	this.selectedCity = $rootScope.selectedCity
@@ -13,8 +14,9 @@ angular.module('sportzCast')
 		this.currentPage = 0
 		this.pageSize = 2
 		this.pageCount = 0
+
   	var baseUrl = SportzCastApi.url('games')
-  	SportzCastApi.get(baseUrl, 'search', "?city="+this.selectedCity.id).
+  	SportzCastApi.get(baseUrl, 'search', "?CityId="+this.selectedCity.id).
   		then(function(data){
   			self.resultList = data.Results
   			angular.forEach(self.resultList, function(result){
