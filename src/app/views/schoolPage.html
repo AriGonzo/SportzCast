@@ -13,20 +13,22 @@
 	<div class="schoolChatContain">
 		
 		<div class="sportDropdown" id="schoolPageDropdown">
-				<button class="btn btn-default dropdown-toggle sportDivision" type="button" class="dropdownMenu2" data-toggle="sports" aria-expanded="true">
-					Sport
-				    <span class="caret"></span>
-				  </button>
-					<ul class="dropdown-menu" ng-model="browse.selectedState" role="menu" id="stateList">
-						<li ng-repeat="state in browse.states" role="presentation"><a role="menuitem" tabindex="-1" ng-click="browse.selectState(state.name)" value="{{state.abbreviation}}">{{state.name}}</a></li>
-					</ul>
-				<button class="btn btn-default dropdown-toggle sportDivision" type="button" class="dropdownMenu2" data-toggle="sports" aria-expanded="true">
+				
+					<button class="btn btn-default dropdown-toggle sportDivision dropdownMenu1 sport" type="button" data-toggle="dropdown" aria-expanded="true">
+						Sport
+					    <span class="caret"></span>
+					  </button>
+						<ul class="dropdown-menu" role="menu">
+							<li role="presentation"><a role="menuitem" tabindex="-1" ng-repeat="sport in school.schoolInfo.Sports" value="{{sport.Name}}">{{sport.Name}}</a></li>
+						</ul>
+
+			<!-- 	<button class="btn btn-default dropdown-toggle sportDivision" type="button" class="dropdownMenu2" data-toggle="sports" aria-expanded="true">
 					Full Schedule
 				    <span class="caret"></span>
 				  </button>
 					<ul class="dropdown-menu" ng-model="browse.selectedState" role="menu" id="stateList">
 						<li ng-repeat="state in browse.states" role="presentation"><a role="menuitem" tabindex="-1" ng-click="browse.selectState(state.name)" value="{{state.abbreviation}}">{{state.name}}</a></li>
-					</ul>
+					</ul> -->
 			</div>
 
 		<div id="schoolPageChat"ng-include="'app/views/chat.html'"></div>

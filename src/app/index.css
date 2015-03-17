@@ -603,6 +603,9 @@ div.results {
 #sportName {
 	float: right;
 }
+.sportDropdown ul {
+	position: relative;
+}
 
 .selectGame {
 	margin-top: 3ex;
