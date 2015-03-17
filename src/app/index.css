@@ -764,6 +764,14 @@ div.brandSchoolBanner {
   border-right: 10px solid #E81B0F;
   background: #F5F5F5;
 }
+.adsenseBanner {
+	position: absolute;
+	width: 468px;
+  height: 60px;
+  bottom: 10%;
+  left: 33%;
+	outline: black solid 1px;
+}
 /*Media Queries */
 @media (max-width: 500px){
 	#jumboLogo {
