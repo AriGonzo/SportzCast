@@ -403,6 +403,7 @@ footer {
 div.results {
 	width: 100%;
 	margin: auto;
+	padding: 30px;
 	background: #F5F5F5;
 	-moz-column-count: 6;
   -moz-column-gap: 10px;
@@ -556,7 +557,7 @@ div.results {
 }
 #schoolResults{
 	width: 100%;
-	margin-top: 25ex;
+	margin-top: 27ex;
 }
 #schoolResults li {
 	list-style-type: none;
@@ -819,14 +820,6 @@ div.brandSchoolBanner {
 	}
 	.breadcrumbs {
 		margin-left: 1em;
-	}
-	div.results {
-		-moz-column-count: 1;
-		-moz-column-gap: 20px;
-		-webkit-column-count: 1;
-		-webkit-column-gap: 20px;
-		column-count: 1;
-		column-gap: 20px;
 	}
 	#floridaResults li {
 		list-style-type: none;
