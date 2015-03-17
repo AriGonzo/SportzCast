@@ -499,6 +499,10 @@ div.results {
 	width: 600px;
 	height: 400px;
 }
+.fouls {
+	width: 100%;
+	position: absolute;
+}
 
 .foulCount {
 	margin-top: 24ex;
@@ -537,13 +541,13 @@ div.results {
 	float: left;
 	position: static;
 }
+.result1 h3 {
+	font-size: 23px;
+}
 
 .result1:nth-child(n+1):nth-child(even) {
 	float: right;
 	margin-right: 20ex;
-}
-.result1:nth-child(n+1):nth-child(even) h3 {
-	float: right;
 }
 .bball:nth-child(n+3) {
 	margin-top: 25ex;

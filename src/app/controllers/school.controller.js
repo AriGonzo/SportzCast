@@ -8,6 +8,9 @@ angular.module('sportzCast')
   		this.showTab = tab
   		console.log(this.showTab)
   	}
+  	
+  	console.log($stateParams)
+
   	//API call
   	var baseUrl = SportzCastApi.url('schools');
   	this.schoolInfo = {};
