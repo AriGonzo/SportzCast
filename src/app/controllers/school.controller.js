@@ -19,7 +19,12 @@ angular.module('sportzCast')
   		self.schoolInfo = data
   		$('.schoolBanner').css({"background-color":self.schoolInfo.PrimaryColor})
   		$('.schoolBanner').css({"color":self.schoolInfo.SecondaryColor})
-  		console.log(self.schoolInfo)
+  		if (!self.schoolInfo.Sponsor){
+        self.schoolInfo.Sponsor = {}
+        self.schoolInfo.Sponsor.FallBack = "AdSense"
+      }
+      console.log(self.schoolInfo)
+
   	})
 
   });

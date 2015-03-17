@@ -8,12 +8,14 @@ angular.module('sportzCast')
 	    $('.seperator').show();
 	  });
 
-	  navigator.geolocation.getCurrentPosition(function(position) {
-    	self.lat = position.coords.latitude
-    	self.long = position.coords.longitude
-    	console.log(self.lat)
-    	console.log(self.long)
-		})
+	  this.getLocation = function(){
+	  	navigator.geolocation.getCurrentPosition(function(position) {
+	    	self.lat = position.coords.latitude
+	    	self.long = position.coords.longitude
+	    	console.log(self.lat)
+	    	console.log(self.long)
+			})
+	  }
 
 
 

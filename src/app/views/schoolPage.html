@@ -1,8 +1,7 @@
 <div id="schoolPage" class="appPage">
 	<div class="schoolBanner">
-		<div class="schoolAd"><img src="{{school.schoolInfo.Sponsor.Url}}"/></div>
-		<div class="brandSchoolBanner">{{school.schoolInfo.Name}}</div>
-		<div class="schoolLogo"><img src="{{school.schoolInfo.Logo}}"/></div>
+		<div class="schoolAd">{{school.schoolInfo.Sponsor.FallBack}}<a href="{{school.schoolInfo.Sponsor.Href}}"><img src="{{school.schoolInfo.Sponsor.Url}}"/></a></div>
+		<div class="schoolLogo">{{school.schoolInfo.Name}}<img src="{{school.schoolInfo.Logo}}"/></div>
 	</div>
 
 	<div class="schoolScoreContain">
