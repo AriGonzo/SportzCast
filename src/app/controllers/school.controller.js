@@ -3,6 +3,12 @@ angular.module('sportzCast')
   	$('.seperator').show();
   	var self = this;
   	this.game = $rootScope.selectedGame;
+  	this.showTab = 1
+  	this.tabShow = function(tab){
+  		this.showTab = tab
+  		console.log(this.showTab)
+  	}
+  	//API call
   	var baseUrl = SportzCastApi.url('schools');
   	this.schoolInfo = {};
 

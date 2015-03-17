@@ -6,6 +6,9 @@ body {
 	font-family: 'Marvel', sans-serif;
 	background-color: #F5F5F5;
 }
+a {
+	cursor: pointer;
+}
 .container {
 	width: 100%;
 	padding: 0;
@@ -538,7 +541,7 @@ div.results {
 
 .result1:nth-child(n+1):nth-child(even) {
 	float: right;
-	margin-right: 10ex;
+	margin-right: 6ex;
 }
 .result1:nth-child(n+1):nth-child(even) h3 {
 	float: right;
@@ -550,8 +553,6 @@ div.results {
 	margin-bottom: 27ex;
 }
 
-
-
 .gameTitle {
 	margin-top: -3ex;
 }
@@ -561,7 +562,7 @@ div.results {
 }
 #schoolResults li {
 	list-style-type: none;
-	margin-left: 10ex;
+	margin-left: 6ex;
 }
 
 #result2title {
@@ -655,7 +656,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	padding-left: 2ex;
 	margin-top: 0;
 	margin-bottom: 0;
-	font-size: 25pt
+	font-size: 25pt;
+	width: 110%;
 
 }
 #schoolPageScore {
@@ -718,6 +720,46 @@ div.brandSchoolBanner {
 	outline-style: double;
 	outline-width: 9px;
 	outline-color: black;
+}
+.chatNav {
+	width: 100%;
+  height: 15%;
+}
+.chatNavButtons {
+	border-bottom: 1px solid black;
+}
+.chatNavButtons a {
+	color: black	
+}
+.chatNavButtons li {
+	background: #707070;
+	display: inline-block;
+  width: 32%;
+  text-align: center;
+  border: 1px solid black;
+  font-size: 20pt;
+}
+.chatNavButtons li:hover {
+	background: #9D9D9D;
+}
+.chatNavButtons li.active {
+	background: #E81B0F;
+	border: none;
+	padding-bottom: 3px;
+	cursor: default;
+}
+.chatBody {
+	height: 85%;
+	background: #E81B0F;
+}
+.tabBody {
+	padding: 12px;
+	height: 100%;
+  border-top: 15px solid #E81B0F;
+  border-bottom: 20px solid #E81B0F;
+  border-left: 10px solid #E81B0F;
+  border-right: 10px solid #E81B0F;
+  background: #F5F5F5;
 }
 /*Media Queries */
 @media (max-width: 500px){
