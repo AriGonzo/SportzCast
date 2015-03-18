@@ -558,6 +558,7 @@ div.results {
 
 .gameTitle {
 	margin-top: -3ex;
+	width: 105%;
 }
 #schoolResults{
 	width: 100%;
