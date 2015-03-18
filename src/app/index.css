@@ -341,7 +341,7 @@ footer {
   font-size: 18pt;
 }
 .zipContain {
-  font-size: 14pt;
+  font-size: 15pt;
   padding: 1ex;
   display: inline-block;
   margin-right: -3ex;
@@ -369,6 +369,31 @@ footer {
 .cityStateContain label {
 	margin-right: 1ex;
   margin-left: 1ex;
+}
+.schoolAdvanced label {
+	margin: 2ex;
+}
+.schoolAdvanced label h3 {
+	margin: 0;
+}
+.schoolAdvanced input {
+	width: 55%;
+	font-size: 16pt;
+	padding-left: 1ex;
+}
+.schoolSportInput, .schoolDivisionInput, .schoolSubmit {
+	display: inline;
+}
+.schoolSportInput, .schoolDivisionInput {
+	font-size: 16pt;
+}
+.schoolDivisionInput, .schoolSubmit {
+	margin-left: 7ex;
+}
+.schoolSubmit {
+	font-size: 16pt;
+	margin: 1ex 2ex 1ex 7ex;
+  float: right;
 }
 
 /*Browse Page*/

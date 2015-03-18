@@ -3,7 +3,7 @@
 		<div class="searchFieldContain">
 			<h1>Find</h1>
 			<div class="searchFields">
-				<select class="gameSchoolChoiceList" ng-change="search.advancedOptions(value)"ng-model="value">
+				<select class="gameSchoolChoiceList dropdown" ng-change="search.advancedOptions(value)"ng-model="value">
 					<option value="game">Games</option>
 					<option value="school">Schools</option>
 				</select>
@@ -35,6 +35,29 @@
 			</div>
 			<div id="schoolAdvancedFields" ng-show="search.option==='school'">
 				<h1>School Search Options</h1>
+				<div class="searchFields schoolAdvanced">
+					<div class="schoolNameInput">
+						<label><h3>School or Mascot Name</h3></label>
+						<input type="text"><br>
+					</div>
+					<div class="schoolSportInput">
+						<label><h3>Sport:</h3></label>
+						<select>
+							<option>Test 1</option>
+							<option>Test 2</option>
+							<option>Test 3</option>
+						</select>
+					</div>
+					<div class="schoolDivisionInput">
+						<label><h3>Division:</h3></label>
+						<select>
+							<option>Test 1</option>
+							<option>Test 2</option>
+							<option>Test 3</option>
+						</select>
+					</div>
+					<button type="submit" class="btn btn-success schoolSubmit">Start Search</button>
+				</div>
 			</div>
 		</div>		
 		<!--<div class="userBlock">
