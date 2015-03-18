@@ -8,7 +8,6 @@ angular.module('sportzCast')
   	$('.navbar').show();
     $('#navLogo').show();
     $('.seperator').show();
-    $('#floridaResults').hide();
   });
 
   this.states = [

@@ -301,7 +301,14 @@ footer {
 	height: 5px;
 	background: #707070;
 }
-
+#navBarSearch {
+	padding-left: 0;
+	padding-right: 10px;
+	font-size: 11pt;
+}
+.nav-Icons li a:hover {
+	color: red!important
+}
 .fa {
 	color: black;
 }
@@ -319,6 +326,48 @@ footer {
 .copyright:hover {
 	background: transparent!important;
 	color: white!important;
+}
+.searchFields {
+	width: 100%;
+	height: 20%;
+	background-color: red;
+	border: ridge black;
+}
+.gameSchoolChoiceList {
+	width: 75%;
+  height: 55%;
+  margin: 10px;
+  margin-left: 11%;
+  font-size: 18pt;
+}
+.zipContain {
+  font-size: 14pt;
+  padding: 1ex;
+  display: inline-block;
+  margin-right: -3ex;
+}
+.zipContain label {
+	margin-right: 1ex;
+}
+.zipContain input {
+	width: 30%;
+}
+.zipContain h1 {
+	margin: 0;
+	font-size: 25pt;
+	display: inline-block;
+  position: absolute;
+  right: 67%;
+  font-weight: bold;
+}
+.cityStateContain {
+	font-size: 16pt;
+    padding: 1ex 0ex;
+  display: inline-block;
+}
+.cityStateContain label {
+	margin-right: 1ex;
+  margin-left: 1ex;
 }
 
 /*Browse Page*/
@@ -791,8 +840,8 @@ div.brandSchoolBanner {
 
 .nearMeContain {
 	display: block;
-  padding-top: 20ex;
-  padding-bottom: 20ex;
+  padding-top: 9ex;
+  padding-bottom: 36ex;
   width: 100ex;
   height: 100vh;
   margin: auto;

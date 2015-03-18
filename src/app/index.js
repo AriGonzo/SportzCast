@@ -32,9 +32,9 @@ angular.module('sportzCast', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngResource'
       	controller: 'SchoolCtrl as school',
       	templateUrl: 'app/views/schoolPage.html'
       })
-      .state('nearMe', {
-        url: '/nearMe',
-        controller: 'GeoLocateCtrl as geo',
+      .state('search', {
+        url: '/search',
+        controller: 'SearchCtrl as search',
         templateUrl: 'app/views/geoResults.html'
       });
     $urlRouterProvider.otherwise('/');

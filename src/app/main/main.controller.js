@@ -1,5 +1,5 @@
 angular.module('sportzCast')
-  .controller('MainCtrl', function ($state) {
+  .controller('MainCtrl', function ($state, $rootScope) {
     
     $(document).ready(function() {
       $('.seperator').hide();
@@ -10,6 +10,15 @@ angular.module('sportzCast')
         $('.tab').hide();
         $('#panelButtons a li').removeClass('active')
         $(tabName).show().addClass('active');
+    }
+
+    this.getLocation = function(){
+      navigator.geolocation.getCurrentPosition(function(position) {
+        self.lat = position.coords.latitude
+        self.long = position.coords.longitude
+        $rootScope.searchParameter = "lat="+self.lat+"&lng="+self.long
+        $state.go('results')
+      })  
     }
 
   });

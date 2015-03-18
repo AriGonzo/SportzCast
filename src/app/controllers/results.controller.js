@@ -1,6 +1,11 @@
 angular.module('sportzCast')
   .controller('ResultsCtrl', function ($state, $rootScope, SportzCastApi) {
     window.scrollTo(0,0)
+    $(document).ready(function() {  
+      $('.navbar').show();
+      $('#navLogo').show();
+      $('.seperator').show();
+    });
   	var self = this
   	this.resultList = []
   	this.selectedState = $rootScope.selectedState

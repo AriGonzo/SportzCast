@@ -17,5 +17,3 @@ angular.module('sportzCast')
   		}
   	}
   });
-
-  // http://sportzcast-api.azurewebsites.net/games/search?CityId=19283

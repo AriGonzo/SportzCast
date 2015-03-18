@@ -1,6 +1,43 @@
 <div class="appPage">
 	<div class="nearMeContain">
-		<div class="userBlock">
+		<div class="searchFieldContain">
+			<h1>Find</h1>
+			<div class="searchFields">
+				<select class="gameSchoolChoiceList" ng-change="search.advancedOptions(value)"ng-model="value">
+					<option value="game">Games</option>
+					<option value="school">Schools</option>
+				</select>
+			</div>
+		</div>
+		<div class="searchFieldContain">
+			<h1>Near</h1>
+			<div class="searchFields">
+				<div class="zipContain">
+					<label>Zip</label>
+					<input type="text"></input>
+					<h1>OR</h1>
+				</div>
+				<div class="cityStateContain">
+					<label>State</label>
+					<select ng-change="search.getCities(this.state)" ng-model="state">
+						<option ng-repeat="state in search.states">{{state.Name}}</option>
+					</select>
+					<label>City</label>
+					<select>
+						<option ng-repeat="city in search.cities">{{city.Name}}</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="searchFieldContain">
+			<div id="gameAdvancedFields" ng-show="search.option==='game'">
+				<h1>Game Search Options</h1>
+			</div>
+			<div id="schoolAdvancedFields" ng-show="search.option==='school'">
+				<h1>School Search Options</h1>
+			</div>
+		</div>		
+		<!--<div class="userBlock">
 			<div class="userInputLocation">
 				<h1 class="inputHeader">Search by Zip Code</h1>
 				<div class="formContain">
@@ -27,9 +64,9 @@
 		          <option>Game</option>
 		          <option>School</option>
        		 </select>
-					<button ng-click="geo.getLocation()" class="btn btn-info"><span class="glyphicon glyphicon-map-marker"</span>Locate Me</button>
+					<button ng-click="search.getLocation()" class="btn btn-info"><span class="glyphicon glyphicon-map-marker"</span>Locate Me</button>
 				</div>
 			</div>
-		</div>
+		</div>-->
 	</div>
 </div>
