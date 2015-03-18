@@ -351,18 +351,19 @@ footer {
 }
 .zipContain input {
 	width: 30%;
+	text-align: center;
 }
 .zipContain h1 {
-	margin: 0;
-	font-size: 25pt;
-	display: inline-block;
+  margin: 0;
+  font-size: 24pt;
+  display: inline-block;
   position: absolute;
-  right: 67%;
-  font-weight: bold;
+  right: 64%;
+  font-weight: 700;
 }
 .cityStateContain {
-	font-size: 16pt;
-    padding: 1ex 0ex;
+  font-size: 16pt;
+  padding: 1ex 0 1ex 1ex;
   display: inline-block;
 }
 .cityStateContain label {
