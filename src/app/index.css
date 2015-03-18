@@ -393,18 +393,30 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	font-size: 16pt;
 	padding-left: 1ex;
 }
-.schoolSportInput, .schoolDivisionInput, .schoolSubmit {
+.schoolSportInput, .schoolDivisionInput, .schoolSubmit, .liveCheckbox {
 	display: inline;
+}
+.liveCheckbox {
+  margin-left: 4ex;
+  font-size: 16pt
 }
 .schoolSportInput, .schoolDivisionInput {
 	font-size: 16pt;
 }
+.schoolSportInput {
+	margin-left: 1ex;
+}
 .schoolDivisionInput, .schoolSubmit {
-	margin-left: 7ex;
+	margin-left: 4ex;
 }
 .schoolSubmit {
 	font-size: 16pt;
 	margin: 1ex 2ex 1ex 7ex;
+  float: right;
+}
+.gameSubmit {
+  font-size: 16pt;
+  margin: 1ex 4ex 1ex 0ex;
   float: right;
 }
 

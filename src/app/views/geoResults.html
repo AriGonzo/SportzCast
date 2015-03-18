@@ -32,6 +32,29 @@
 		<div class="searchFieldContain">
 			<div id="gameAdvancedFields" ng-show="search.option==='game'">
 				<h1>Game Search Options</h1>
+				<div class="searchFields">
+					<div class="schoolSportInput">
+						<label><h3>Sport:</h3></label>
+						<select>
+							<option>Test 1</option>
+							<option>Test 2</option>
+							<option>Test 3</option>
+						</select>
+					</div>
+					<div class="schoolDivisionInput">
+						<label><h3>Division:</h3></label>
+						<select>
+							<option>Test 1</option>
+							<option>Test 2</option>
+							<option>Test 3</option>
+						</select>
+					</div>
+					<div class="liveCheckbox">
+						<label>Live Now?</label>
+						<input type="checkbox" />
+					</div>
+					<button type="submit" class="btn btn-success gameSubmit">Start Search</button>
+				</div>
 			</div>
 			<div id="schoolAdvancedFields" ng-show="search.option==='school'">
 				<h1>School Search Options</h1>
@@ -58,6 +81,9 @@
 					</div>
 					<button type="submit" class="btn btn-success schoolSubmit">Start Search</button>
 				</div>
+			</div>
+			<div id="selectFieldAbove" ng-show="search.option===''">
+				<h1>Select an option above</h1>
 			</div>
 		</div>		
 		<!--<div class="userBlock">

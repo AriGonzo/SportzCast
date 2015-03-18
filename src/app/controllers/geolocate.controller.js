@@ -2,7 +2,7 @@ angular.module('sportzCast')
   .controller('SearchCtrl', function ($state, $rootScope, SportzCastApi) {
 	  $rootScope.selectedCity = undefined
 	  var self = this;
-	  this.option ="game"
+	  this.option =""
 	  this.states = [];
 	  this.cities = [];
 	  $(document).ready(function() {	
