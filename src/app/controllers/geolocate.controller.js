@@ -1,5 +1,5 @@
 angular.module('sportzCast')
-  .controller('GeoLocateCtrl', function ($state) {
+  .controller('GeoLocateCtrl', function ($state, $rootScope) {
 	  var self = this;
 
 	  $(document).ready(function() {	
@@ -12,12 +12,10 @@ angular.module('sportzCast')
 	  	navigator.geolocation.getCurrentPosition(function(position) {
 	    	self.lat = position.coords.latitude
 	    	self.long = position.coords.longitude
-	    	console.log(self.lat)
-	    	console.log(self.long)
+	    	$rootScope.searchParameter = "lat="+self.lat+"&lng="+self.long
+	    	$state.go('results')
 			})
 	  }
-
-
 
 
   });

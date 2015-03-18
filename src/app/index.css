@@ -830,7 +830,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 .formContain form {
 	font-size: 17pt;
 	text-align: center;
-	padding-top: 3%;
+	margin-top: 6ex;
+}
+.formContain form label {
+	margin-left: 1ex;
 }
 .formContain form input {
 	width: 27%;
@@ -838,7 +841,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	font-size: 12pt;
 }
 .formButtons {
-	margin-top: 3ex;
+	margin-top: 7ex;
   text-align: center;
 }
 .formButtons button {

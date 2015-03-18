@@ -2,19 +2,15 @@
 	<div class="nearMeContain">
 		<div class="userBlock">
 			<div class="userInputLocation">
-				<h1 class="inputHeader">Search by City/State/Zip</h1>
+				<h1 class="inputHeader">Search by Zip Code</h1>
 				<div class="formContain">
 					<form>
-						<label>City</label>
-						<input />
-						<label>State</label>
-						<input /><br>
-						<label>Zip</label>
-						<input />
-        		<select role="menu">
+						<select role="menu">
 		          <option>Game</option>
 		          <option>School</option>
-       		 </select>
+       		 	</select>
+						<label>Zip</label>
+						<input />
 					</form>
 				</div>
 				<div class="formButtons">
@@ -31,7 +27,7 @@
 		          <option>Game</option>
 		          <option>School</option>
        		 </select>
-					<button class="btn btn-info"><span class="glyphicon glyphicon-map-marker"</span>Locate Me</button>
+					<button ng-click="geo.getLocation()" class="btn btn-info"><span class="glyphicon glyphicon-map-marker"</span>Locate Me</button>
 				</div>
 			</div>
 		</div>
