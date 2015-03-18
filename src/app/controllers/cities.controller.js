@@ -1,6 +1,6 @@
 angular.module('sportzCast')
   .controller('CityCtrl', function ($state, $rootScope, SportzCastApi, $stateParams) {
-  	var region = $rootScope.selectedState
+    var region = $rootScope.selectedState
   	var baseUrl = SportzCastApi.url('geo')
   	var self = this;
   	this.cities = $rootScope.cities

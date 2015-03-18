@@ -1,5 +1,6 @@
 angular.module('sportzCast')
   .controller('GeoLocateCtrl', function ($state, $rootScope) {
+	  $rootScope.selectedCity = undefined
 	  var self = this;
 
 	  $(document).ready(function() {	

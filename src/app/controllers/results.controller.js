@@ -1,15 +1,16 @@
 angular.module('sportzCast')
   .controller('ResultsCtrl', function ($state, $rootScope, SportzCastApi) {
-  	window.scrollTo(0,0)
+  	$rootScope.searchParameter = undefined
+    window.scrollTo(0,0)
   	var self = this
   	this.resultList = []
   	this.selectedState = $rootScope.selectedState
   	this.selectedCity = $rootScope.selectedCity
   	this.geoSearchParameter = $rootScope.searchParameter
 
-  	// if(!this.geoSearchParameter || !this.selectedCity || !this.selectedState){
-  	// 	$state.go('browse.states')
-  	// }
+  	if(!this.geoSearchParameter && !this.selectedCity && !this.selectedState){
+  		$state.go('browse.states')
+  	}
 
     this.cityOrSearch = ""
     if(!this.selectedCity) {
