@@ -355,6 +355,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
   padding: 1ex;
   display: inline-block;
   margin-right: -5ex;
+  width: 32%;
 }
 .zipContain label {
 	margin-right: 1ex;
@@ -365,9 +366,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 }
 .zipContain h1 {
   margin: 0;
-  font-size: 24pt;
+  font-size: 22pt;
   display: inline-block;
-  position: absolute;
+  text-align: center;
+  padding-left: 2ex;
   right: 64%;
   font-weight: 700;
 }
