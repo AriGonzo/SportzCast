@@ -1,6 +1,5 @@
 angular.module('sportzCast')
   .controller('ResultsCtrl', function ($state, $rootScope, SportzCastApi) {
-  	$rootScope.searchParameter = undefined
     window.scrollTo(0,0)
   	var self = this
   	this.resultList = []
