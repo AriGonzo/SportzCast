@@ -3,6 +3,9 @@ body {
 	font-family: 'Marvel', sans-serif;
 	background-color: #F5F5F5;
 }
+select {
+	border: 0
+}
 a {
 	cursor: pointer;
 }
@@ -369,7 +372,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
   font-weight: 700;
 }
 .cityStateContain {
-  font-size: 16pt;
+  font-size: 15pt;
   padding: 1ex 0 1ex 1ex;
   display: inline-block;
 }
