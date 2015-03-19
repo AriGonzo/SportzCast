@@ -26,7 +26,7 @@ angular.module('sportzCast')
 	  	self.option = value
 	  	console.log(self.option)
 	  }
-	  this.search = function(type, zip, cityId, name, sport, division, live){
+	  this.search = function(type, zip, state, cityId, name, sport, division, live){
 	  	zip = zip || ""
 	  	cityId = cityId || ""
 	  	name = name || ""
@@ -34,6 +34,7 @@ angular.module('sportzCast')
 	  	division = division || ""
 	  	if(!live){ live = "" }
 	  	$rootScope.selectedCity = {id: cityId.Id, name:cityId.Name}
+	  	$rootScope.selectedState = state
 	  	$rootScope.type = type
 	  	
 	  	$state.go('results')

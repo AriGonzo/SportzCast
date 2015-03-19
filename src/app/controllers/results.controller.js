@@ -14,7 +14,7 @@ angular.module('sportzCast')
   	this.geoSearchParameter = $rootScope.searchParameter
 
   	if(!this.geoSearchParameter && !this.selectedCity && !this.selectedState){
-  		$state.go('browse.states')
+  		$state.go('search')
   	}
 
     this.cityOrSearch = ""
