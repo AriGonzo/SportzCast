@@ -6,6 +6,7 @@ angular.module('sportzCast')
       $('#navLogo').show();
       $('.seperator').show();
     });
+    
   	var self = this
   	this.resultList = []
   	this.selectedState = $rootScope.selectedState
@@ -13,18 +14,21 @@ angular.module('sportzCast')
   	this.selectedCity = $rootScope.selectedCity
   	this.geoSearchParameter = $rootScope.searchParameter
 
+    //avoids results page without context - reroute to search
   	if(!this.geoSearchParameter && !this.selectedCity && !this.selectedState){
   		$state.go('search')
   	}
 
+    //arriving via geo-search
     this.cityOrSearch = ""
     if(!this.selectedCity) {
       self.cityOrSearch = this.geoSearchParameter
+      $('.breadcrumbs').hide();
     } else {
       self.cityOrSearch = "CityId="+this.selectedCity.id
     }
 
-
+    //API call based on route to results page
   	var baseUrl = SportzCastApi.url(this.selectedType)
   	SportzCastApi.get(baseUrl, 'search?', self.cityOrSearch).
   		then(function(data){

@@ -1,6 +1,9 @@
 angular.module('sportzCast')
   .controller('MainCtrl', function ($state, $rootScope) {
-    
+    $rootScope.searchParameter = undefined;
+    $rootScope.selectedState = "";
+    $rootScope.selectedCity = "";
+
     $(document).ready(function() {
       $('.seperator').hide();
       $('#navLogo').hide();
