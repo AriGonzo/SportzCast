@@ -9,6 +9,7 @@ angular.module('sportzCast')
   	var self = this
   	this.resultList = []
   	this.selectedState = $rootScope.selectedState
+    this.selectedType = $rootScope.type;
   	this.selectedCity = $rootScope.selectedCity
   	this.geoSearchParameter = $rootScope.searchParameter
 
@@ -24,7 +25,7 @@ angular.module('sportzCast')
     }
 
 
-  	var baseUrl = SportzCastApi.url('games')
+  	var baseUrl = SportzCastApi.url(this.selectedType)
   	SportzCastApi.get(baseUrl, 'search?', self.cityOrSearch).
   		then(function(data){
   			self.resultList = data.Results

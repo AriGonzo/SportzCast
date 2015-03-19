@@ -23,6 +23,7 @@ angular.module('sportzCast')
   	this.citySelect = function(cityId, cityName){
     		$rootScope.selectedCity = {id: cityId, name:cityName}
     		$rootScope.selectedState = region
+        $rootScope.type = "games"
     		$state.go('results')
     		console.log(cityName)
     		console.log(cityId)

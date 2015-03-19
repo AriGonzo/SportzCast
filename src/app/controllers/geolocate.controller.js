@@ -26,8 +26,17 @@ angular.module('sportzCast')
 	  	self.option = value
 	  	console.log(self.option)
 	  }
-	  this.test = function(word){
-	  	console.log(word)
+	  this.search = function(type, zip, cityId, name, sport, division, live){
+	  	zip = zip || ""
+	  	cityId = cityId || ""
+	  	name = name || ""
+	  	sport = sport || ""
+	  	division = division || ""
+	  	if(!live){ live = "" }
+	  	$rootScope.selectedCity = {id: cityId.Id, name:cityId.Name}
+	  	$rootScope.type = type
+	  	
+	  	$state.go('results')
 	  }
 	  this.getLocation = function(){
 	  	navigator.geolocation.getCurrentPosition(function(position) {

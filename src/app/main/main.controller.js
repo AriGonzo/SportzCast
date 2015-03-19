@@ -16,6 +16,7 @@ angular.module('sportzCast')
       navigator.geolocation.getCurrentPosition(function(position) {
         self.lat = position.coords.latitude
         self.long = position.coords.longitude
+        $rootScope.type = "games"
         $rootScope.searchParameter = "lat="+self.lat+"&lng="+self.long
         $state.go('results')
       })  

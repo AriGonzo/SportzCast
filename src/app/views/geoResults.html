@@ -4,8 +4,8 @@
 			<h1>Find</h1>
 			<div class="searchFields">
 				<select class="gameSchoolChoiceList dropdown" ng-change="search.advancedOptions(value)"ng-model="value">
-					<option value="game">Games</option>
-					<option value="school">Schools</option>
+					<option value="games">Games</option>
+					<option value="schools">Schools</option>
 				</select>
 			</div>
 		</div>
@@ -14,7 +14,7 @@
 			<div class="searchFields">
 				<div class="zipContain">
 					<label>Zip</label>
-					<input type="text"></input>
+					<input ng-model="zip"type="text"></input>
 					<h1>OR</h1>
 				</div>
 				<div class="cityStateContain">
@@ -23,27 +23,25 @@
 						<option ng-repeat="state in search.states">{{state.Name}}</option>
 					</select>
 					<label>City</label>
-					<select>
-						<option ng-repeat="city in search.cities">{{city.Name}}</option>
-					</select>
+					<select ng-options="city.Name for city in search.cities" ng-model="city"></select>
 				</div>
 			</div>
 		</div>
 		<div class="searchFieldContain">
-			<div id="gameAdvancedFields" ng-show="search.option==='game'">
+			<div id="gameAdvancedFields" ng-show="search.option==='games'">
 				<h1>Game Search Options</h1>
 				<div class="searchFields">
 					<div class="schoolSportInput">
 						<label><h3>Sport:</h3></label>
-						<select>
-							<option>Test 1</option>
+						<select ng-model="sport1">
+							<option value="wrab">Test 1</option>
 							<option>Test 2</option>
 							<option>Test 3</option>
 						</select>
 					</div>
 					<div class="schoolDivisionInput">
 						<label><h3>Division:</h3></label>
-						<select>
+						<select ng-model="division1">
 							<option>Test 1</option>
 							<option>Test 2</option>
 							<option>Test 3</option>
@@ -51,21 +49,21 @@
 					</div>
 					<div class="liveCheckbox">
 						<label>Live Now?</label>
-						<input type="checkbox" />
+						<input type="checkbox" ng-model="liveNow"/>
 					</div>
-					<button type="submit" class="btn btn-success gameSubmit">Start Search</button>
+					<button type="submit" ng-click="search.search(this.value, this.zip, this.city)" class="btn btn-success gameSubmit">Start Search</button>
 				</div>
 			</div>
-			<div id="schoolAdvancedFields" ng-show="search.option==='school'">
+			<div id="schoolAdvancedFields" ng-show="search.option==='schools'">
 				<h1>School Search Options</h1>
 				<div class="searchFields schoolAdvanced">
 					<div class="schoolNameInput">
 						<label><h3>School or Mascot Name</h3></label>
-						<input type="text"><br>
+						<input type="text" ng-model="schoolOrMascot"><br>
 					</div>
 					<div class="schoolSportInput">
 						<label><h3>Sport:</h3></label>
-						<select>
+						<select ng-model="sport2">
 							<option>Test 1</option>
 							<option>Test 2</option>
 							<option>Test 3</option>
@@ -73,7 +71,7 @@
 					</div>
 					<div class="schoolDivisionInput">
 						<label><h3>Division:</h3></label>
-						<select>
+						<select ng-model="division2">
 							<option>Test 1</option>
 							<option>Test 2</option>
 							<option>Test 3</option>
