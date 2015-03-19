@@ -344,10 +344,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	border: ridge black;
 }
 .gameSchoolChoiceList {
-	width: 75%;
+	width: 85%;
   height: 55%;
   margin: 10px;
-  margin-left: 11%;
+  margin-left: 3ex;
   font-size: 18pt;
 }
 .zipContain {

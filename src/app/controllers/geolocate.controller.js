@@ -1,5 +1,7 @@
 angular.module('sportzCast')
   .controller('SearchCtrl', function ($state, $rootScope, SportzCastApi) {
+	  $rootScope.selectedState = ""
+	  $rootScope.searchParameter = undefined
 	  $rootScope.selectedCity = undefined
 	  var self = this;
 	  this.option =""
