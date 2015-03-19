@@ -30,7 +30,25 @@
 					</ul> -->
 			</div>
 
-		<div id="schoolPageChat"ng-include="'app/views/chat.html'"></div>
+		<div id="schoolPageChat">
+			<div id="bball" class="scoreboard">
+				<div class="chatContain">
+					<div class="chatNav">
+						<ul class="chatNavButtons" ng-init="showTab=1">
+							<a ng-click="showTab = 1"><li ng-class="{active: showTab == 1}">Twitter</li></a>
+							<a ng-click="showTab = 2"><li ng-class="{active: showTab == 2}">Facebook</li></a>
+							<a ng-click="showTab = 3"><li ng-class="{active: showTab == 3}">Schedule</li></a>
+						</ul>
+					</div>
+					<div class="chatBody">
+						<div class="tabBody twitterFeed" ng-show="showTab==1">
+						</div>
+						<div class="tabBody" ng-show="showTab==2">Tab 2</div>
+						<div class="tabBody" ng-show="showTab==3">Tab 3</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 	<div class="adsenseBanner">Ad Sense</div>
 

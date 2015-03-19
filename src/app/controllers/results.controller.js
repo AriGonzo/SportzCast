@@ -21,7 +21,8 @@ angular.module('sportzCast')
 
     //arriving via geo-search
     this.cityOrSearch = ""
-    if(!this.selectedCity) {
+
+    if(this.selectedCity == undefined) {
       self.cityOrSearch = this.geoSearchParameter
       $('.breadcrumbs').hide();
     } else {

@@ -1,6 +1,8 @@
 angular.module('sportzCast')
   .controller('SearchCtrl', function ($state, $rootScope, SportzCastApi) {
 	  var self = this;
+	  this.lat = ""
+	  this.long = ""
 
 	  //clear out any rootScope settings
 	  $rootScope.selectedState = ""
@@ -42,11 +44,23 @@ angular.module('sportzCast')
 	  	sport = sport || ""
 	  	division = division || ""
 	  	if(!live){ live = "" }
-	  	$rootScope.selectedCity = {id: cityId.Id, name:cityId.Name}
-	  	$rootScope.selectedState = state
 	  	$rootScope.type = type
-	  	
-	  	$state.go('results')
-	  }
+
+	  	if(zip == "" && cityId== ""){
+	  		$('#errorAlert').append("Please Provide a Zip or City/State!<br>")
+	  	} else if (zip != "") {
+	  		var baseUrl = SportzCastApi.url('geo')
+		  	SportzCastApi.get(baseUrl, 'zips?', 'zip='+ zip +'&limit=1').then(function(data){
+		  		self.lat = data.Results[0].Lat
+		  		self.long = data.Results[0].Lng
+		  		$rootScope.searchParameter = "lat="+self.lat+"&lng="+self.long
+		  		$state.go('results')
+		  	})} else {
+		  		$rootScope.selectedCity = {id: cityId.Id, name:cityId.Name}
+		  		$rootScope.selectedState = state
+		  		$state.go('results')
+		  	}
+		  	
+	  	}//end search();
 
   });
