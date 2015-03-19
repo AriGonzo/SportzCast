@@ -21,6 +21,7 @@ angular.module('sportzCast')
         self.long = position.coords.longitude
         $rootScope.type = "games"
         $rootScope.searchParameter = "lat="+self.lat+"&lng="+self.long
+        $rootScope.selectedCity = undefined;
         $state.go('results')
       })  
     }

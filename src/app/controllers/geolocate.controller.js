@@ -45,6 +45,7 @@ angular.module('sportzCast')
 	  	division = division || ""
 	  	if(!live){ live = "" }
 	  	$rootScope.type = type
+	  	console.log(sport)
 
 	  	if(zip == "" && cityId== ""){
 	  		$('#errorAlert').append("Please Provide a Zip or City/State!<br>")
@@ -56,6 +57,7 @@ angular.module('sportzCast')
 		  		$rootScope.searchParameter = "lat="+self.lat+"&lng="+self.long
 		  		$state.go('results')
 		  	})} else {
+		  		$rootScope.sport = sport
 		  		$rootScope.selectedCity = {id: cityId.Id, name:cityId.Name}
 		  		$rootScope.selectedState = state
 		  		$state.go('results')

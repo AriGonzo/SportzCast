@@ -35,9 +35,9 @@
 					<div class="schoolSportInput">
 						<label><h3>Sport:</h3></label>
 						<select ng-model="sport1">
-							<option value="wrab">Test 1</option>
-							<option>Test 2</option>
-							<option>Test 3</option>
+							<option value="1">Football</option>
+							<option>Women's Basketball</option>
+							<option value="2">Men's Basketball</option>
 						</select>
 					</div>
 					<div class="schoolDivisionInput">
@@ -52,7 +52,7 @@
 						<label>Live Now?</label>
 						<input type="checkbox" ng-model="liveNow"/>
 					</div>
-					<button type="submit" ng-click="search.search(this.value, this.zip, this.state, this.city)" class="btn btn-success gameSubmit">Start Search</button>
+					<button type="submit" ng-click="search.search(this.value, this.zip, this.state, this.city, this.name, this.sport1)" class="btn btn-success gameSubmit">Start Search</button>
 				</div>
 			</div>
 			<div id="schoolAdvancedFields" ng-show="search.option==='schools'">
