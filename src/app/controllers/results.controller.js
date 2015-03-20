@@ -14,6 +14,7 @@ angular.module('sportzCast')
   	this.selectedCity = $rootScope.selectedCity
     if($rootScope.sport != ""){
       self.selectedSport = "&Sport=" + $rootScope.sport
+      console.log(self.selectedSport)
     }
     if($rootScope.name !=""){
       self.selectedName = "&School=" + $rootScope.schoolName
@@ -40,6 +41,7 @@ angular.module('sportzCast')
   	var baseUrl = SportzCastApi.url(this.selectedType)
   	SportzCastApi.get(baseUrl, 'search?', self.cityOrSearch, self.selectedName, self.selectedSport).
   		then(function(data){
+        console.log(SportzCastApi.get(baseUrl, 'search?', self.cityOrSearch, self.selectedName, self.selectedSport))
   			self.resultList = data.Results
   			angular.forEach(self.resultList, function(result){
   				var value = new Date(parseInt(result.StartDate.substr(6)))
