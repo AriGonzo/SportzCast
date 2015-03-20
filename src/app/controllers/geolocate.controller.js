@@ -48,16 +48,17 @@ angular.module('sportzCast')
 	  	console.log(sport)
 
 	  	if(zip == "" && cityId== ""){
-	  		$('#errorAlert').append("Please Provide a Zip or City/State!<br>")
+	  		$('#errorAlert').html("Please Provide a Zip or City/State!<br>")
 	  	} else if (zip != "") {
 	  		var baseUrl = SportzCastApi.url('geo')
 		  	SportzCastApi.get(baseUrl, 'zips?', 'zip='+ zip +'&limit=1').then(function(data){
 		  		self.lat = data.Results[0].Lat
 		  		self.long = data.Results[0].Lng
-		  		$rootScope.searchParameter = "lat="+self.lat+"&lng="+self.long
+		  		$rootScope.searchParameter = "lat="+self.lat+"&lng="+self.long 
 		  		$state.go('results')
 		  	})} else {
 		  		$rootScope.sport = sport
+		  		$rootScope.schoolName = name
 		  		$rootScope.selectedCity = {id: cityId.Id, name:cityId.Name}
 		  		$rootScope.selectedState = state
 		  		$state.go('results')

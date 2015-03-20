@@ -2,11 +2,11 @@
 	<div class="nearMeContain">
 		<div id="errorAlert"></div>
 		<div class="searchFieldContain">
-			<h1>Find</h1>
+			<h1>Search by:</h1>
 			<div class="searchFields">
 				<select class="gameSchoolChoiceList dropdown" ng-change="search.advancedOptions(value)"ng-model="value">
-					<option value="games">Games</option>
-					<option value="schools">Schools</option>
+					<option value="games">Game</option>
+					<option value="schools">School</option>
 				</select>
 			</div>
 		</div>
@@ -52,7 +52,7 @@
 						<label>Live Now?</label>
 						<input type="checkbox" ng-model="liveNow"/>
 					</div>
-					<button type="submit" ng-click="search.search(this.value, this.zip, this.state, this.city, this.name, this.sport1)" class="btn btn-success gameSubmit">Start Search</button>
+					<button type="submit" ng-click="search.search('games', this.zip, this.state, this.city, this.name, this.sport1, this.division1, this.live)" class="btn btn-success gameSubmit">Start Search</button>
 				</div>
 			</div>
 			<div id="schoolAdvancedFields" ng-show="search.option==='schools'">
@@ -65,9 +65,9 @@
 					<div class="schoolSportInput">
 						<label><h3>Sport:</h3></label>
 						<select ng-model="sport2">
-							<option>Test 1</option>
-							<option>Test 2</option>
-							<option>Test 3</option>
+							<option value="1">Football</option>
+							<option>Women's Basketball</option>
+							<option value="2">Men's Basketball</option>
 						</select>
 					</div>
 					<div class="schoolDivisionInput">
@@ -78,7 +78,7 @@
 							<option>Test 3</option>
 						</select>
 					</div>
-					<button type="submit" class="btn btn-success schoolSubmit">Start Search</button>
+					<button type="submit" ng-click="search.search('games', this.zip, this.state, this.city, this.schoolOrMascot, this.sport2, this.division2, this.live)" class="btn btn-success gameSubmit">Start Search</button>
 				</div>
 			</div>
 			<div id="selectFieldAbove" ng-show="search.option===''">

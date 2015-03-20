@@ -9,11 +9,15 @@ angular.module('sportzCast')
     
   	var self = this
   	this.resultList = []
-  	this.selectedState = $rootScope.selectedState
     this.selectedType = $rootScope.type;
+  	this.selectedState = $rootScope.selectedState
   	this.selectedCity = $rootScope.selectedCity
     if($rootScope.sport != ""){
       self.selectedSport = "&Sport=" + $rootScope.sport
+    }
+    if($rootScope.name !=""){
+      self.selectedName = "&School=" + $rootScope.schoolName
+      console.log(self.selectedName)
     }
   	this.geoSearchParameter = $rootScope.searchParameter
 
@@ -34,7 +38,7 @@ angular.module('sportzCast')
 
     //API call based on route to results page
   	var baseUrl = SportzCastApi.url(this.selectedType)
-  	SportzCastApi.get(baseUrl, 'search?', self.cityOrSearch, self.selectedSport).
+  	SportzCastApi.get(baseUrl, 'search?', self.cityOrSearch, self.selectedName, self.selectedSport).
   		then(function(data){
   			self.resultList = data.Results
   			angular.forEach(self.resultList, function(result){
