@@ -867,6 +867,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	margin-left: 2ex;
 }
 #errorAlert {
+	position: absolute;
 	color: red;
 	text-decoration: underline;
 }
@@ -1014,6 +1015,34 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 		font-size: 12pt;
 		padding: 3px 6px;
 	}
+	.cityStateContain, .zipContain {
+		font-size: 14pt;
+	}
+	.zipContain h1 {
+		font-size: 18pt;
+	}
+	.searchFields div {
+		font-size: 12pt!important;
+	}
+	.searchFields div label h3 {
+		font-size: 14pt;
+	}
+}
+
+@media (max-width: 800px){
+	.nearMeContain {
+		width: 100%;
+	}
+	.searchFieldContain {
+		width: 80%;
+		margin: auto;
+	}
+	.schoolDivisionInput, .liveCheckbox {
+		margin-left: 2ex;
+	}
+	.schoolSportInput {
+		font-size: 14pt;
+	}
 }
 
 @media (max-width: 845px){
@@ -1022,10 +1051,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	}
 	#secondOverlay nav {
 		display: none;
-	}
-	#footer {
-		min-height: 10px!important;
-		height: 25px!important;
 	}
 	#jumboLogo {
 		width: 400px;
@@ -1041,6 +1066,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 		margin: auto;
 		font-size: 27pt;
 		margin-top: 4ex;
+	}
+	.zipContain h1 {
+		padding-left: 1ex;
 	}
 }
 

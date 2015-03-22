@@ -5,6 +5,7 @@ angular.module('sportzCast')
 	  this.long = ""
 
 	  //clear out any rootScope settings
+	  $rootScope.sport = ""
 	  $rootScope.selectedState = ""
 	  $rootScope.searchParameter = undefined
 	  $rootScope.selectedCity = undefined
@@ -55,6 +56,7 @@ angular.module('sportzCast')
 		  		self.lat = data.Results[0].Lat
 		  		self.long = data.Results[0].Lng
 		  		$rootScope.searchParameter = "lat="+self.lat+"&lng="+self.long 
+					$rootScope.sport = sport
 		  		$state.go('results')
 		  	})} else {
 		  		$rootScope.sport = sport

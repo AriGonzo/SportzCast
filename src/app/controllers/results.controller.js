@@ -15,6 +15,8 @@ angular.module('sportzCast')
     if($rootScope.sport != ""){
       self.selectedSport = "&Sport=" + $rootScope.sport
       console.log(self.selectedSport)
+    } else {
+      console.log("skipped it")
     }
     if($rootScope.name !=""){
       self.selectedName = "&School=" + $rootScope.schoolName
