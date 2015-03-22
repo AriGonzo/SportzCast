@@ -10,7 +10,7 @@
 			<form id="searchBox">
 					<input type="text" id="searchFilter" ng-model="citySearch" class="form-control" placeholder="Search for..."></input>
 			</form>
-			<div class="results">  
+			<div class="results mobileView" id="mobileCities">  
 				<ul id="floridaResults">
 					<li ng-repeat="city in cty.cities | filter:citySearch"><a ng-click="cty.citySelect(city.Id, city.Name)">{{city.Name}}</a></li>
 				</ul>

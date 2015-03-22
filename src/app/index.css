@@ -937,6 +937,15 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	  column-gap: 0;
 	  margin-bottom: 5ex; 
 	}
+	div.results {
+		-moz-column-count: 1;
+  	-moz-column-gap: 0;
+  	-webkit-column-count: 1;
+	  -webkit-column-gap: 0;
+	  column-count: 1;
+	  column-gap: 0;
+	  margin-bottom: 5ex; 
+	}
 	#floridaResults {
 		height: inherit;
 		margin-top: 7ex;
@@ -1054,6 +1063,14 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	}
 	.searchFields div label h3 {
 		font-size: 14pt;
+	}
+	#mobileCities {
+		-moz-column-count: 1;
+  	-moz-column-gap: 0;
+  	-webkit-column-count: 1;
+	  -webkit-column-gap: 0;
+	  column-count: 1;
+	  column-gap: 0;
 	}
 }
 
