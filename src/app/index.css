@@ -1154,6 +1154,16 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	  width: 60%;
 	  float: right;
 	}
+	.schoolScoreContain h1 {
+	  font-size: 19pt;
+  	width: 170%;
+  	display: inline-block;		
+  	text-align: center;
+	}
+	.schoolPageMobile {
+		position: absolute;
+  	top: 35%;
+	}
 }
 
 @media (max-width: 800px){
