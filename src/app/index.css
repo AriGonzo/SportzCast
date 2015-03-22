@@ -419,6 +419,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
   margin: 1ex 4ex 1ex 0ex;
   float: right;
 }
+.socialFooter {
+	float: right;
+}
 
 /*Browse Page*/
 #browsePage {
@@ -1194,6 +1197,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	  text-align: center;
 	  display: block;
 	  width: 100%;
+	}
+	.footerLinks {
+		display: none;
 	}
 }
 
