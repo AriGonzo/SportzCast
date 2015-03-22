@@ -2,7 +2,12 @@ angular.module('sportzCast')
   .controller('SchoolCtrl', function ($state, $stateParams, SportzCastApi, $rootScope) {
   	$('.seperator').show();
     var self = this;
-    this.game = $rootScope.selectedGame;
+    // if($rootScope.selectedGame){
+    //   this.game = $rootScope.selectedGame;
+    // } else {
+    //   var baseUrl = SportzCastApi.url('games')
+    //   SportzCastApi.get(baseUrl, 'search?', 'School='+$stateParams.school)
+    // }
 
   	//API call
   	var baseUrl = SportzCastApi.url('schools');
@@ -10,6 +15,16 @@ angular.module('sportzCast')
 
   	SportzCastApi.get(baseUrl,$stateParams.school).then(function(data){
   		self.schoolInfo = data
+      if ($rootScope.selectedGame){
+        self.game = $rootScope.selectedGame;
+      } else {
+        var baseUrl = SportzCastApi.url('games')
+        SportzCastApi.get(baseUrl, 'search?', 'School='+self.schoolInfo.Id).then(function(data){
+          self.game = data.Results[0]
+          console.log(data)
+        })
+      }
+    console.log(self.schoolInfo)
   		$('.schoolBanner').css({"background-color":self.schoolInfo.PrimaryColor})
   		$('.schoolBanner').css({"color":self.schoolInfo.SecondaryColor})
       console.log(self.schoolInfo.Twitter)
