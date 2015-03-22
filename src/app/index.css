@@ -791,11 +791,9 @@ div.brandSchoolBanner {
 /*Near Me*/
 
 .nearMeContain {
-	display: block;
-  padding-top: 13ex;
-  padding-bottom: 36ex;
+  display: block;
+  padding-top: 7ex;
   width: 100ex;
-  height: 100vh;
   margin: auto;
 }
 .userBlock {
@@ -1057,6 +1055,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	.cityStateContain, .zipContain {
 		font-size: 14pt;
 	}
+	.cityStateContain {
+		padding-right: 0;
+		padding-left: 0;
+	}
+	.schoolSportInput, #divisionDrop {
+		margin-left: 0;
+	}
 	.zipContain h1 {
 		font-size: 18pt;
 	}
@@ -1075,6 +1080,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	  column-gap: 0;
 	  padding: 0;
 	  margin-top: 0;
+	}
+	.searchFields > * {
+		display: block;
+		width: 100%;
+	}
+	.searchFields select {
+		width: 79%;
+	}
+	.searchfields > div {
+		display: block;
+		width: 100%;
+		padding: 0;
+	}
+	div.schoolAdvanced div {
+		text-align: left
+	}
+	.schoolAdvanced input {
+		width: 40%;
+		font-size: 12pt;
 	}
 }
 
@@ -1140,6 +1164,24 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	}
 	.zipContain h1 {
 		padding-left: 1ex;
+	}
+	.searchFieldContain {
+		width: 94%;
+		text-align: center;
+	}
+	.schoolSportInput select {
+		width: 65%;
+	}
+	#divisionDrop select {
+		width: 65%;
+	}
+	.gameSubmit {
+		float: none;
+		width: 100%;
+		margin-right: 0;
+	}
+	.nearMeContain {
+		margin-bottom: 8ex;
 	}
 }
 

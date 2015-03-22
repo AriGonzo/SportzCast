@@ -19,12 +19,16 @@
 					<h1>OR</h1>
 				</div>
 				<div class="cityStateContain">
-					<label>State</label>
-					<select ng-change="search.getCities(this.state)" ng-model="state">
-						<option ng-repeat="state in search.states">{{state.Name}}</option>
-					</select>
-					<label>City</label>
-					<select ng-options="city.Name for city in search.cities" ng-model="city"></select>
+					<div id="stateContain">
+						<label>State</label>
+						<select ng-change="search.getCities(this.state)" ng-model="state">
+							<option ng-repeat="state in search.states">{{state.Name}}</option>
+						</select>
+					</div>
+					<div id="cityContain">
+						<label>City</label>
+						<select ng-options="city.Name for city in search.cities" ng-model="city"></select>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -40,7 +44,7 @@
 							<option value="2">Men's Basketball</option>
 						</select>
 					</div>
-					<div class="schoolDivisionInput">
+					<div class="schoolDivisionInput" id="divisionDrop">
 						<label><h3>Division:</h3></label>
 						<select ng-model="division1">
 							<option>Test 1</option>
@@ -52,9 +56,8 @@
 						<label>Live Now?</label>
 						<input type="checkbox" ng-model="liveNow"/>
 					</div>
-					<br>
-					<button type="submit" ng-click="search.search('games', this.zip, this.state, this.city, this.name, this.sport1, this.division1, this.live)" class="btn btn-success gameSubmit">Start Search</button>
 				</div>
+				<button type="submit" ng-click="search.search('games', this.zip, this.state, this.city, this.name, this.sport1, this.division1, this.live)" class="btn btn-success gameSubmit">Start Search</button>
 			</div>
 			<div id="schoolAdvancedFields" ng-show="search.option==='schools'">
 				<h1>School Search Options</h1>
@@ -71,7 +74,7 @@
 							<option value="2">Men's Basketball</option>
 						</select>
 					</div>
-					<div class="schoolDivisionInput">
+					<div class="schoolDivisionInput" id="divisionDrop">
 						<label><h3>Division:</h3></label>
 						<select ng-model="division2">
 							<option>Test 1</option>
@@ -79,8 +82,8 @@
 							<option>Test 3</option>
 						</select>
 					</div>
-					<button type="submit" ng-click="search.search('schools', this.zip, this.state, this.city, this.schoolOrMascot, this.sport2, this.division2, this.live)" class="btn btn-success gameSubmit">Start Search</button>
 				</div>
+				<button type="submit" ng-click="search.search('schools', this.zip, this.state, this.city, this.schoolOrMascot, this.sport2, this.division2, this.live)" class="btn btn-success gameSubmit">Start Search</button>
 			</div>
 			<div id="selectFieldAbove" ng-show="search.option===''">
 				<h1><strong><u>Select an option above</u></strong></h1>
