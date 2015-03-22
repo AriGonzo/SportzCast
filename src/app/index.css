@@ -976,7 +976,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 		margin: auto;
 	}
 	.resultsContain {
-		margin-top: 14ex;
 		padding: 30px;
 	}
 	.sportDropdown {
@@ -987,9 +986,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 		padding: 10px 12px
 	}
 	.bballcontain{
-		display: none;
-	}
-	.bball button {
 		display: none;
 	}
 	.result1 {
@@ -1108,6 +1104,32 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	.schoolNameInput label {
 		text-align: center;
   	width: 100%;
+	}
+	#schoolResults {
+		width: 100%;
+  	margin-top: 7ex;
+	}
+	#schoolResults li {
+		list-style-type: none;
+		width: 100%;
+		margin: 0;
+		height: 34ex;
+	}
+	.result1 h3 {
+		text-align: center;
+		margin-top: 36px;
+	}
+	.result1:nth-child(n+1):nth-child(even) {
+		float: none;
+		margin-right: 0;
+	}
+	.bball:nth-child(n+3) {
+		margin-top: 0;
+	}
+	.selectGame {
+		margin-left: 0;
+		width: 100%;
+		margin-top: 1ex;
 	}
 }
 
