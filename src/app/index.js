@@ -39,4 +39,6 @@ angular.module('sportzCast', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngResource'
       });
     $urlRouterProvider.otherwise('/');
   })
-;
+.config(function ($locationProvider) {
+  $locationProvider.html5Mode(true)
+})
