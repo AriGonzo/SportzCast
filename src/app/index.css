@@ -1135,6 +1135,25 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 		width: 100%;
 		margin-top: 1ex;
 	}
+	.schoolChatContain, .adsenseBanner {
+		display: none;
+	}
+	#homeSchoolName {
+		display: none;
+	}
+	.schoolAd {
+		border: none;
+	}
+	.schoolAd img {
+		height: 100%;
+	  display: block;
+	  width: 223%;
+	}
+	.schoolLogo img {
+		height: 100%;
+	  width: 60%;
+	  float: right;
+	}
 }
 
 @media (max-width: 800px){

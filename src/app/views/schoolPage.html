@@ -1,7 +1,7 @@
 <div id="schoolPage" class="appPage">
 	<div class="schoolBanner">
 		<div class="schoolAd">{{school.schoolInfo.Sponsor.FallBack}}<a href="{{school.schoolInfo.Sponsor.Href}}"><img ng-show="school.schoolInfo.Sponsor.Url != undefined" src="{{school.schoolInfo.Sponsor.Url}}"/></a></div>
-		<div class="schoolLogo">{{school.schoolInfo.Name}}<img src="{{school.schoolInfo.Logo}}"/></div>
+		<div class="schoolLogo"><span id="homeSchoolName">{{school.schoolInfo.Name}}</span><img src="{{school.schoolInfo.Logo}}"/></div>
 	</div>
 
 	<div class="schoolScoreContain">
