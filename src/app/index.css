@@ -871,6 +871,23 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	color: red;
 	text-decoration: underline;
 }
+
+/*School Results Page*/
+#schoolResultLogo {
+	width: 250px;
+}
+#schoolResultInfo {
+	margin-top: 7ex;
+}
+#schoolResultsContain {
+	width: 100%;
+	margin-top: 14ex
+}
+#schoolResultsContain li {
+	list-style-type: none;
+  margin-left: 6ex;
+  width: 33%;
+}
 /*Media Queries */
 @media (max-width: 500px){
 	#jumboLogo {

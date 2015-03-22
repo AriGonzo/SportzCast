@@ -11,7 +11,7 @@
 			</div>
 		</div>
 		<div class="searchFieldContain">
-			<h1>Near</h1>
+			<h1>Near:</h1>
 			<div class="searchFields">
 				<div class="zipContain">
 					<label>Zip</label>
@@ -30,7 +30,7 @@
 		</div>
 		<div class="searchFieldContain">
 			<div id="gameAdvancedFields" ng-show="search.option==='games'">
-				<h1>Game Search Options</h1>
+				<h1>Game Search Options:</h1>
 				<div class="searchFields">
 					<div class="schoolSportInput">
 						<label><h3>Sport:</h3></label>
@@ -79,11 +79,11 @@
 							<option>Test 3</option>
 						</select>
 					</div>
-					<button type="submit" ng-click="search.search('games', this.zip, this.state, this.city, this.schoolOrMascot, this.sport2, this.division2, this.live)" class="btn btn-success gameSubmit">Start Search</button>
+					<button type="submit" ng-click="search.search('schools', this.zip, this.state, this.city, this.schoolOrMascot, this.sport2, this.division2, this.live)" class="btn btn-success gameSubmit">Start Search</button>
 				</div>
 			</div>
 			<div id="selectFieldAbove" ng-show="search.option===''">
-				<h1>Select an option above</h1>
+				<h1><strong><u>Select an option above</u></strong></h1>
 			</div>
 		</div>		
 	</div>

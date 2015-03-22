@@ -5,6 +5,7 @@ angular.module('sportzCast')
 	  this.long = ""
 
 	  //clear out any rootScope settings
+	  $rootScope.name = ""
 	  $rootScope.sport = ""
 	  $rootScope.selectedState = ""
 	  $rootScope.searchParameter = undefined
@@ -46,10 +47,9 @@ angular.module('sportzCast')
 	  	division = division || ""
 	  	if(!live){ live = "" }
 	  	$rootScope.type = type
-	  	console.log(sport)
 
 	  	if(zip == "" && cityId== ""){
-	  		$('#errorAlert').html("Please Provide a Zip or City/State!<br>")
+	  		$('#errorAlert').html("Please Provide a Zip or City/State!")
 	  	} else if (zip != "") {
 	  		var baseUrl = SportzCastApi.url('geo')
 		  	SportzCastApi.get(baseUrl, 'zips?', 'zip='+ zip +'&limit=1').then(function(data){
@@ -57,13 +57,22 @@ angular.module('sportzCast')
 		  		self.long = data.Results[0].Lng
 		  		$rootScope.searchParameter = "lat="+self.lat+"&lng="+self.long 
 					$rootScope.sport = sport
-		  		$state.go('results')
+					$rootScope.name = name
+					if(type == 'games'){
+						$state.go('results')
+					} else if (type == 'schools'){
+						$state.go('schoolResults')
+					}
 		  	})} else {
 		  		$rootScope.sport = sport
-		  		$rootScope.schoolName = name
+		  		$rootScope.name = name
 		  		$rootScope.selectedCity = {id: cityId.Id, name:cityId.Name}
 		  		$rootScope.selectedState = state
-		  		$state.go('results')
+					if(type == 'games'){
+						$state.go('results')
+					} else if (type == 'schools'){
+						$state.go('schoolResults')
+					}
 		  	}
 		  	
 	  	}//end search();

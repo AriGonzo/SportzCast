@@ -23,9 +23,14 @@ angular.module('sportzCast', ['ngAnimate', 'ngTouch', 'ngSanitize', 'ngResource'
         controller: 'CityCtrl as cty'
       })
       .state('results', {
-        url: '/results',
+        url: '/games/results',
         controller: 'ResultsCtrl as results',
         templateUrl: 'app/views/resultsPage.html'
+      })
+      .state('schoolResults', {
+        url: '/schools/results',
+        controller: 'SchoolResultsCtrl as schoolResults',
+        templateUrl: 'app/views/schoolResult.html'
       })
       .state('schoolPage', {
       	url: '/schools/:school',
