@@ -936,6 +936,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	  column-count: 1;
 	  column-gap: 0;
 	  margin-bottom: 5ex; 
+	  margin-top: 2ex;
 	}
 	div.results {
 		-moz-column-count: 1;
@@ -948,7 +949,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	}
 	#floridaResults {
 		height: inherit;
-		margin-top: 7ex;
+		margin-top: 2ex;
 		padding: 0;
 	}
 	#alpha {
