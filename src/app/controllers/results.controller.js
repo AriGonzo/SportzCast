@@ -13,6 +13,7 @@ angular.module('sportzCast')
     this.selectedType = $rootScope.type;
   	this.selectedCity = $rootScope.selectedCity
     if($rootScope.sport != ""){
+      console.log($rootScope.sport)
       self.selectedSport = "&Sport=" + $rootScope.sport
     }
     // if($rootScope.name !=""){
