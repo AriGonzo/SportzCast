@@ -1,5 +1,6 @@
 angular.module('sportzCast')
   .controller('BrowseCtrl', function ($state, $rootScope, $resource, SportzCastApi) {
+  window.scrollTo(0,0)
   $rootScope.searchParameter = undefined
   $rootScope.selectedState = ""
   var self = this

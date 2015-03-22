@@ -1,5 +1,6 @@
 angular.module('sportzCast')
   .controller('CityCtrl', function ($state, $rootScope, SportzCastApi, $stateParams) {
+    window.scrollTo(0,0)
     var self = this;
     var region = $rootScope.selectedState
   	var baseUrl = SportzCastApi.url('geo')
