@@ -25,11 +25,7 @@
 	</div>
 
 	<div class="results" id="mobile" hidden>
-		<div>
-			<form id="searchBox">
-		</div>
-				<input type="text" ng-model="stateSearch" class="form-control" placeholder="Search for..."></input>
-		</form>  
+		<input type="text" ng-model="stateSearch" class="form-control" placeholder="Search for..."></input>
 		<ul id="floridaResults" class="stateMobile">
 			<li ng-repeat="state in browse.states | filter:stateSearch"><a ng-click="browse.selectState(state.name)">{{state.name}}</a></li>
 		</ul>
