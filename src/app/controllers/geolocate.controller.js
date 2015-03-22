@@ -49,6 +49,7 @@ angular.module('sportzCast')
 	  	$rootScope.type = type
 
 	  	if(zip == "" && cityId== ""){
+	  		window.scrollTo(0,0)
 	  		$('#errorAlert').html("Please Provide a Zip or City/State!")
 	  	} else if (zip != "") {
 	  		var baseUrl = SportzCastApi.url('geo')

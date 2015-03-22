@@ -1112,10 +1112,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	.nearMeContain {
 		width: 97%;
 	}
-	.searchFieldContain {
-		width: 80%;
-		margin: auto;
-	}
 	.schoolDivisionInput, .liveCheckbox {
 		margin-left: 2ex;
 	}
@@ -1174,6 +1170,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	.searchFieldContain {
 		width: 94%;
 		text-align: center;
+		margin-top: 5ex;
 	}
 	.schoolSportInput select {
 		width: 65%;
@@ -1191,6 +1188,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	}
 	#cityContain {
 		margin-top: 2ex;
+	}
+	#errorAlert {
+	  margin-top: 2ex;
+	  text-align: center;
+	  display: block;
+	  width: 100%;
 	}
 }
 
