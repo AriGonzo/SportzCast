@@ -1016,6 +1016,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 		text-align: center;
 		background: black;
 		outline: 1px white solid;
+		display: none;
 	}
 	.awayScoreMobile div {
 		text-align: center;
