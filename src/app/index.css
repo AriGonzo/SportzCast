@@ -1104,7 +1104,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 
 @media (max-width: 800px){
 	.nearMeContain {
-		width: 100%;
+		width: 97%;
 	}
 	.searchFieldContain {
 		width: 80%;
@@ -1182,6 +1182,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	}
 	.nearMeContain {
 		margin-bottom: 8ex;
+	}
+	#cityContain {
+		margin-top: 2ex;
 	}
 }
 
