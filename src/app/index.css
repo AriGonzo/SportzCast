@@ -1016,7 +1016,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 		text-align: center;
 		background: black;
 		outline: 1px white solid;
-		display: none;
 	}
 	.awayScoreMobile div {
 		text-align: center;
@@ -1107,8 +1106,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
   	width: 100%;
 	}
 	#schoolResults {
-		width: 100%;
-  	margin-top: 7ex;
+	  width: 106%;
+	  margin-top: 7ex;
+	  padding-left: 0;
 	}
 	#schoolResults li {
 		list-style-type: none;
