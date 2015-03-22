@@ -9,19 +9,15 @@ angular.module('sportzCast')
     
   	var self = this
   	this.resultList = []
-    this.selectedType = $rootScope.type;
   	this.selectedState = $rootScope.selectedState
+    this.selectedType = $rootScope.type;
   	this.selectedCity = $rootScope.selectedCity
     if($rootScope.sport != ""){
       self.selectedSport = "&Sport=" + $rootScope.sport
-      console.log(self.selectedSport)
-    } else {
-      console.log("skipped it")
     }
-    if($rootScope.name !=""){
-      self.selectedName = "&School=" + $rootScope.schoolName
-      console.log(self.selectedName)
-    }
+    // if($rootScope.name !=""){
+    //   self.selectedName = "&School=" + $rootScope.name
+    // }
   	this.geoSearchParameter = $rootScope.searchParameter
 
     //avoids results page without context - reroute to search
@@ -41,9 +37,8 @@ angular.module('sportzCast')
 
     //API call based on route to results page
   	var baseUrl = SportzCastApi.url(this.selectedType)
-  	SportzCastApi.get(baseUrl, 'search?', self.cityOrSearch, self.selectedName, self.selectedSport).
+  	SportzCastApi.get(baseUrl, 'search?', self.cityOrSearch, self.selectedSport).
   		then(function(data){
-        console.log(SportzCastApi.get(baseUrl, 'search?', self.cityOrSearch, self.selectedName, self.selectedSport))
   			self.resultList = data.Results
   			angular.forEach(self.resultList, function(result){
   				var value = new Date(parseInt(result.StartDate.substr(6)))
