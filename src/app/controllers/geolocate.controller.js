@@ -5,6 +5,7 @@ angular.module('sportzCast')
 	  this.long = ""
 
 	  //clear out any rootScope settings
+	  $rootScope.selectedGame = ""
 	  $rootScope.name = ""
 	  $rootScope.sport = ""
 	  $rootScope.selectedState = ""

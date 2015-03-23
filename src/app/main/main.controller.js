@@ -1,9 +1,14 @@
 angular.module('sportzCast')
   .controller('MainCtrl', function ($state, $rootScope) {
     window.scrollTo(0,0)
-    $rootScope.searchParameter = undefined;
-    $rootScope.selectedState = "";
-    $rootScope.selectedCity = "";
+    
+    //clear out any rootScope settings
+    $rootScope.selectedGame = ""
+    $rootScope.name = ""
+    $rootScope.sport = ""
+    $rootScope.selectedState = ""
+    $rootScope.searchParameter = undefined
+    $rootScope.selectedCity = undefined
 
     $(document).ready(function() {
       $('.seperator').hide();

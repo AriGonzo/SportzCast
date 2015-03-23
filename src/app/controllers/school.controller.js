@@ -10,6 +10,10 @@ angular.module('sportzCast')
     //   SportzCastApi.get(baseUrl, 'search?', 'School='+$stateParams.school)
     // }
 
+    this.schoolPage = function(slug) {
+      $state.go('schoolPage', {school: slug})
+    }
+
   	//API call
   	var baseUrl = SportzCastApi.url('schools');
   	this.schoolInfo = {};
@@ -18,6 +22,7 @@ angular.module('sportzCast')
   		self.schoolInfo = data
       if ($rootScope.selectedGame){
         self.game = $rootScope.selectedGame;
+        console.log(self.game);
       } else {
         var baseUrl = SportzCastApi.url('games')
         SportzCastApi.get(baseUrl, 'search?', 'School='+self.schoolInfo.Id).then(function(data){
