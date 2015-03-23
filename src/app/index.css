@@ -914,7 +914,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	#schoolResultsContain {
 		margin: auto;
 		margin-top: 5ex;
-
+	}
+	#cityResults {
+		margin-top: 13ex;
 	}
 	#schoolResultsContain li {
 		width: 100%;
