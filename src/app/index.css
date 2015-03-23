@@ -1216,6 +1216,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	.cityStateContain div{
 		display: block
 	}
+	.tempTab {
+		position: absolute;
+		top: 39%;
+		left: 30%;
+	}
 }
 
 @media (max-width: 845px){

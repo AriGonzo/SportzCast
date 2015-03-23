@@ -1,6 +1,7 @@
 angular.module('sportzCast')
   .controller('SchoolCtrl', function ($state, $stateParams, SportzCastApi, $rootScope) {
-  	$('.seperator').show();
+    this.schoolTab = 'scoreboard'
+    $('.seperator').show();
     var self = this;
     // if($rootScope.selectedGame){
     //   this.game = $rootScope.selectedGame;

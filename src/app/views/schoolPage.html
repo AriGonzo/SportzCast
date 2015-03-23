@@ -51,7 +51,7 @@
 		</div>
 	</div>
 	<div class="adsenseBanner">Ad Sense</div>
-	<div class="bballcontainMobile schoolPageMobile" hidden>
+	<div class="bballcontainMobile schoolPageMobile" ng-show="school.schoolTab == 'scoreboard'"hidden>
 		<div class="awayScoreMobile">
 			<label>GUEST</label>
 			<div class="scoreFont">116</div>
@@ -66,15 +66,17 @@
 			<div class="scoreFont">4</div>
 		</div>
 	</div>
+	<div class="chatMobile tempTab" ng-show="school.schoolTab == 'chat'"><h1>Chat Tab</h1></div>
+	<div class="scheduleMobile tempTab" ng-show="school.schoolTab == 'schedule'"><h1>Schedule Tab</h1></div>
   <div class="schoolPageTabs" hidden>
     <div id="scoreTab">
-      <span class="glyphicon glyphicon-sound-7-1 scoretabicon"></span>
+      <a ng-click="school.schoolTab = 'scoreboard'"><span class="glyphicon glyphicon-sound-7-1 scoretabicon"></span></a>
     </div>
     <div id="chatTab">
-      <span class="glyphicon glyphicon-comment scoretabicon"></span>
+      <a ng-click="school.schoolTab = 'chat'"><span class="glyphicon glyphicon-comment scoretabicon"></span></a>
     </div>
     <div id="scheduleTab">
-      <span class="glyphicon glyphicon-calendar scoretabicon"></span>
+      <a ng-click="school.schoolTab = 'schedule'"><span class="glyphicon glyphicon-calendar scoretabicon"></span></a>
     </div>
   </div>
 </div>
