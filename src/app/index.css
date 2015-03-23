@@ -907,8 +907,22 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 		padding-right: 0;
 	}
 }
-
 @media (max-width: 750px){
+		#schoolResults li {
+		width: 100%!important;
+	}
+	#schoolResultsContain li {
+		width: 100%;
+		margin-left: 0;
+		margin-top: 0;
+	}
+	.resultsContain {
+		margin-top: 5ex;
+	}
+}
+
+
+@media (max-width: 770px){
 	#panelButtons {
 		display: none;
 	}
@@ -1115,8 +1129,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	}
 	#schoolResults li {
 		list-style-type: none;
-		width: 100%;
-		margin: 0;
+		width: 60%;
+		margin: auto;
 		height: 34ex;
 	}
 	.result1 h3 {
@@ -1338,8 +1352,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 		height: 82vh!important;
 	}
 	.landing {
-		margin-bottom: 33ex;
-		margin-top: 33ex;
+		margin-bottom: 0;
+		margin-top: 0;
+		height: 88vh; 
 	}
 	#alpha {
 		padding-top: 12%;
@@ -1380,6 +1395,19 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	#stateList {
 		height: 45ex;
 		margin-left: 5ex;
+	}
+	.bballcontain {
+		width: 456px;
+	}
+	#schoolResults li {
+		width: 31%;
+		margin-left: 0;
+	}
+	.gameTitle {
+		widows: 160%;
+	}
+	#timer {
+		font-size: 50pt;
 	}
 }
 
