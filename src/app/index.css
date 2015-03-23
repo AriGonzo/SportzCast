@@ -1190,13 +1190,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 		border-right: black solid 1px;
 	}
 	.scoretabicon {
-	  font-size: 32pt;
+	  font-size: 25pt;
 	  text-align: center;
 	  width: 100%;
 	  height: 115%;
 	  color: white;
 	  display: inline-block;
-	  padding-top: 6px;
+	  padding-top: 8px;
 	}
 }
 
