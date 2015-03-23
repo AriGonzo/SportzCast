@@ -1198,6 +1198,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3019', end
 	  display: inline-block;
 	  padding-top: 8px;
 	}
+	.footer {
+		display: none;
+	}
 }
 
 @media (max-width: 800px){
