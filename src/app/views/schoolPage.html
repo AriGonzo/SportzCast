@@ -1,0 +1,82 @@
+<div id="schoolPage" class="appPage">
+	<div class="schoolBanner">
+		<div class="schoolAd">{{school.schoolInfo.Sponsor.FallBack}}<a href="{{school.schoolInfo.Sponsor.Href}}"><img ng-show="school.schoolInfo.Sponsor.Url != undefined" src="{{school.schoolInfo.Sponsor.Url}}"/></a></div>
+		<div class="schoolLogo"><span id="homeSchoolName">{{school.schoolInfo.Name}}</span><img src="{{school.schoolInfo.Logo}}"/></div>
+	</div>
+
+	<div class="schoolScoreContain">
+		<h1><a href="javascript:" ng-click="school.schoolPage(school.game.AwaySlug)">{{school.game.AwayName}}</a> @ <a href="javascript:" ng-click="school.schoolPage(school.game.SchoolSlug)">{{school.game.SchoolName}}</a></h1>
+		<div id="schoolPageScore"ng-include="'app/views/basketballScoreboard.html'"></div>
+	</div>
+
+	<div class="schoolChatContain">
+		
+		<div class="sportDropdown" id="schoolPageDropdown">
+				
+					<button class="btn btn-default dropdown-toggle sportDivision dropdownMenu1 sport" type="button" data-toggle="dropdown" aria-expanded="true">
+						Sport
+					    <span class="caret"></span>
+					  </button>
+						<ul class="dropdown-menu" role="menu">
+							<li role="presentation"><a role="menuitem" tabindex="-1" ng-repeat="sport in school.schoolInfo.Sports" value="{{sport.Name}}">{{sport.Name}}</a></li>
+						</ul>
+
+			<!-- 	<button class="btn btn-default dropdown-toggle sportDivision" type="button" class="dropdownMenu2" data-toggle="sports" aria-expanded="true">
+					Full Schedule
+				    <span class="caret"></span>
+				  </button>
+					<ul class="dropdown-menu" ng-model="browse.selectedState" role="menu" id="stateList">
+						<li ng-repeat="state in browse.states" role="presentation"><a role="menuitem" tabindex="-1" ng-click="browse.selectState(state.name)" value="{{state.abbreviation}}">{{state.name}}</a></li>
+					</ul> -->
+			</div>
+
+		<div id="schoolPageChat">
+			<div id="bball" class="scoreboard">
+				<div class="chatContain">
+					<div class="chatNav">
+						<ul class="chatNavButtons" ng-init="showTab=1">
+							<a ng-click="showTab = 1"><li ng-class="{active: showTab == 1}">Twitter</li></a>
+							<a ng-click="showTab = 2"><li ng-class="{active: showTab == 2}">Facebook</li></a>
+							<a ng-click="showTab = 3"><li ng-class="{active: showTab == 3}">Schedule</li></a>
+						</ul>
+					</div>
+					<div class="chatBody">
+						<div class="tabBody twitterFeed" ng-show="showTab==1">
+						</div>
+						<div class="tabBody" ng-show="showTab==2">Tab 2</div>
+						<div class="tabBody" ng-show="showTab==3">Tab 3</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="adsenseBanner">Ad Sense</div>
+	<div class="bballcontainMobile schoolPageMobile" ng-show="school.schoolTab == 'scoreboard'"hidden>
+		<div class="awayScoreMobile">
+			<label>GUEST</label>
+			<div class="scoreFont">116</div>
+		</div>
+		<div class="homeScoreMobile">
+			<label>HOME</label>
+			<div class="scoreFont">121</div>
+		</div>
+		<div class="scoreBlock scoreboardFont">1:10</div>
+		<div id="quarterMobile" class="scores">
+			<label class="scoreboardFont">QTR</label>
+			<div class="scoreFont">4</div>
+		</div>
+	</div>
+	<div class="chatMobile tempTab" ng-show="school.schoolTab == 'chat'"><h1>Chat Tab</h1></div>
+	<div class="scheduleMobile tempTab" ng-show="school.schoolTab == 'schedule'"><h1>Schedule Tab</h1></div>
+  <div class="schoolPageTabs" hidden>
+    <div id="scoreTab">
+      <a ng-click="school.schoolTab = 'scoreboard'"><span class="glyphicon glyphicon-sound-7-1 scoretabicon"></span></a>
+    </div>
+    <div id="chatTab">
+      <a ng-click="school.schoolTab = 'chat'"><span class="glyphicon glyphicon-comment scoretabicon"></span></a>
+    </div>
+    <div id="scheduleTab">
+      <a ng-click="school.schoolTab = 'schedule'"><span class="glyphicon glyphicon-calendar scoretabicon"></span></a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,35 @@
+<div id="browsePage" class="appPage container-fluid">
+	
+	<div class="breadcrumbs">
+		<ul class="breadcrumbList">
+			<li><a ng-click="browse.backToBrowse()">Browse</a></li>
+		</ul>
+	</div>
+
+	<div class="browseContent">
+		<div id="usMap">
+			<h1>Search by Region</h1>
+			<div id="vmap" style="width: 800px; height: 300px;"></div>
+		</div>
+		
+		<div id="alpha" class="dropdown">
+			<h1>Search by Alpha</h1>
+			<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+		    Alabama
+		    <span class="caret"></span>
+		  </button>
+			<ul class="dropdown-menu" ng-model="browse.selectedState" role="menu" id="stateList">
+				<li ng-repeat="state in browse.states" role="presentation"><a role="menuitem" tabindex="-1" ng-click="browse.selectState(state.name)" value="{{state.abbreviation}}">{{state.name}}</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="results" id="mobile" hidden>
+		<input type="text" ng-model="stateSearch" class="form-control" placeholder="Search for..."></input>
+		<ul id="floridaResults" class="stateMobile">
+			<li ng-repeat="state in browse.states | filter:stateSearch"><a ng-click="browse.selectState(state.name)">{{state.name}}</a></li>
+		</ul>
+	</div>
+
+
+</div>
